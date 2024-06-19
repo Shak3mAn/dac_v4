@@ -1,0 +1,14 @@
+version: '3'
+services:
+  client-service:
+    build: 
+      context: ./client-service
+      dockerfile: Dockerfile
+    container_name: client-service
+    command: sleep infinity
+    environment:
+      - WATCHPACK_POLLING=true
+    ports:
+      - ${CLIENT_PORT}:${CLIENT_PORT}
+    volumes:
+      - ./client-service:/usr/src/app

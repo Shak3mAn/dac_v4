@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { InventoryItem } from "@/lib/types/types";
+import { InventoryItem, CustomSrvPart } from "@/lib/types/types";
 
 // Inventory Item
 interface JobCardInventoryDetail {
@@ -15,18 +15,31 @@ interface JobCardInventoryDetail {
     onUpdateInventoryList: (updatedInventoryList: InventoryItem[]) => void;
 }
 
+interface CustomInventoryPartDetail {
+    customInventoryItem: CustomSrvPart | null;
+    customInventoryList: CustomSrvPart[];
+    tempCustomInventory: CustomSrvPart | null;
+    onAddCustomInventoryItem: (newCustomInventory: CustomSrvPart) => void;
+    onAddCustomInventoryList: (newCustomInventoryList: CustomSrvPart[]) => void;
+    onAddTempCustomInventoryItem: (newCustomTempInventory: CustomSrvPart) => void;
+    onUpdateCustomInventoryItem: (customInventoryId: string, updateCustomInventory: CustomSrvPart) => void;
+    onDeleteCustomInventoryItem: (customInventoryId: string) => void;
+    onDeleteTempCustomInventoryItem: () => void;
+    onUpdateCustomInventoryList: (updatedCustomInventoryList: CustomSrvPart[]) => void;
+}
+
 export const useInventoryItem = create<JobCardInventoryDetail>((set) => ({
     inventoryItem: null,
     inventoryList: [],
     tempInventory: null,
     onAddInventoryItem: (newInventoryItem) => set(
         (state) => ({
-            inventoryList: [ ...state.inventoryList, newInventoryItem ]
+            inventoryList: [...state.inventoryList, newInventoryItem]
         })
     ),
     onAddInventoryList: (newInventoryList) => set(
         (state) => ({
-            inventoryList: [ ...state.inventoryList, ...newInventoryList ]
+            inventoryList: [...state.inventoryList, ...newInventoryList]
         })
     ),
     onAddTempInventoryItem: (newTempInventoryItem) => set({
@@ -67,3 +80,60 @@ export const useInventoryItem = create<JobCardInventoryDetail>((set) => ({
         })
     )
 }));
+
+export const useCustomInventoryItem = create<CustomInventoryPartDetail>((set) => ({
+    customInventoryItem: null,
+    customInventoryList: [],
+    tempCustomInventory: null,
+    onAddCustomInventoryItem: (newCustomInventoryItem) => set(
+        (state) => ({
+            customInventoryList: [
+                ...state.customInventoryList, newCustomInventoryItem
+            ]
+        })
+    ),
+    onAddCustomInventoryList: (newCustomInventoryList) => set(
+        (state) => ({
+            customInventoryList: [
+                ...state.customInventoryList, ...newCustomInventoryList
+            ]
+        })
+    ),
+    onAddTempCustomInventoryItem: (newTempCustomInventory) => set({
+        tempCustomInventory: newTempCustomInventory
+    }),
+    onUpdateCustomInventoryItem: (customInventoryId, updatedCustomInventory) => set(
+        (state => ({
+            customInventoryList: state.customInventoryList.map(
+                (inventory) => (
+                    inventory.customInventoryID === customInventoryId ? updatedCustomInventory : inventory
+                )
+            )
+        }))
+    ),
+    onUpdateCustomInventoryList: (updatedCustomInventoryList) => set(
+        (state) => ({
+            customInventoryList: state.customInventoryList.map(
+                (inventory) => updatedCustomInventoryList.find(
+                    (updatedItem) => updatedItem.customInventoryID === inventory.customInventoryID
+                ) || inventory
+            ).concat(
+                updatedCustomInventoryList.filter(
+                    (updatedItem) => !state.customInventoryList.some(
+                        (inventory) => inventory.customInventoryID === updatedItem.customInventoryID
+                    )
+                )
+            )
+        })
+    ),
+    onDeleteCustomInventoryItem: (customInventoryId) => set(
+        (state => ({
+            customInventoryList: state.customInventoryList.filter(
+                (inventory) => inventory.customInventoryID !== customInventoryId
+            )
+        }))
+    ),
+    onDeleteTempCustomInventoryItem: () => set({
+        tempCustomInventory: null
+    })
+}))

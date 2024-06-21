@@ -11,7 +11,16 @@ export const cashiers = [
     kraTaxPin: "KRA567890",
     nhifNumber: "NHIF123456",
     address: "789 Pine Avenue, Cityville",
-    leaveDates: ["2024-09-10", "2024-10-15"],
+    leaveDates: [
+      {
+        id: "202401A",
+        date: "2024-03-10",
+      },
+      {
+        id: "202402B",
+        date: "2024-04-15",
+      },
+    ],
     registrationDate: "2024-03-05",
     commencementDate: "2024-04-01",
     annualLeaveAmount: 20,
@@ -51,7 +60,16 @@ export const cashiers = [
     kraTaxPin: "KRA234567",
     nhifNumber: "NHIF567890",
     address: "101 Cedar Lane, Townsville",
-    leaveDates: ["2024-11-10", "2024-12-15"],
+    leaveDates: [
+      {
+        id: "202401A",
+        date: "2024-03-10",
+      },
+      {
+        id: "202402B",
+        date: "2024-04-15",
+      },
+    ],
     registrationDate: "2024-05-01",
     commencementDate: "2024-06-01",
     annualLeaveAmount: 18,
@@ -91,7 +109,16 @@ export const cashiers = [
     kraTaxPin: "KRA678901",
     nhifNumber: "NHIF123890",
     address: "456 Birch Street, Villagetown",
-    leaveDates: ["2025-01-10", "2025-02-15"],
+    leaveDates: [
+      {
+        id: "202401A",
+        date: "2024-03-10",
+      },
+      {
+        id: "202402B",
+        date: "2024-04-15",
+      },
+    ],
     registrationDate: "2024-07-01",
     commencementDate: "2024-08-01",
     annualLeaveAmount: 22,
@@ -131,7 +158,16 @@ export const cashiers = [
     kraTaxPin: "KRA890123",
     nhifNumber: "NHIF123456",
     address: "789 Maple Avenue, Cityburg",
-    leaveDates: ["2025-03-10", "2025-04-15"],
+    leaveDates: [
+      {
+        id: "202401A",
+        date: "2024-03-10",
+      },
+      {
+        id: "202402B",
+        date: "2024-04-15",
+      },
+    ],
     registrationDate: "2024-09-01",
     commencementDate: "2024-10-01",
     annualLeaveAmount: 20,

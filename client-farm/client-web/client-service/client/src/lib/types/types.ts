@@ -110,7 +110,7 @@ interface JCPartCost {
   currency: string;
 }
 
-interface JCPart {
+export interface JCPart {
   name: string;
   quantity: number;
   cost: JCPartCost;
@@ -263,9 +263,9 @@ export interface InventoryItem {
   itemPartID: string;
   itemName: string;
   itemDescription: string;
-  itemVehicleBrand?: string;
+  itemVehicleBrand: string;
   itemVehicleVariant?: string;
-  itemVehicleModel?: string;
+  itemVehicleModel: string;
   itemTotalQuantity: number;
   itemConsumedQuantity: number;
   itemAvailabilityQuantity: number;
@@ -301,9 +301,11 @@ interface SrvSubcontractorService {
   serviceName: string;
   serviceCategory: string;
   description: string;
-  hourlyRate: number;
+  hourlyRate?: number;
   availability: string;
   averageDeliveryTime: string;
+  serviceTotal?: number;
+  status: string;
 }
 
 interface SrvSubcontractor {
@@ -317,7 +319,7 @@ interface SrvSubcontractor {
   service: SrvSubcontractorService[];
 }
 
-interface SrvPartIncluded {
+export interface SrvPartIncluded {
   inventoryID: string;
   partName: string;
   itemPartID: string;
@@ -326,6 +328,7 @@ interface SrvPartIncluded {
   type: string;
   discountApplicable: boolean;
   discount: number;
+  availabilty: boolean;
 }
 
 interface SrvLabourCost {
@@ -352,6 +355,18 @@ interface SrvAvailability {
   workingHours: SrvWorkingHours;
 }
 
+interface SrvLabor {
+  laborID: string;
+  laborName: string;
+  hourlyRate?: number;
+  serviceTotal?: number;
+  discountApplicable: boolean;
+  discount: number;
+  status: string;
+  technicians?: JCTechnician[]
+  laborNote?: string;
+}
+
 export interface ServiceOption {
   id: string;
   catId: string;
@@ -363,12 +378,16 @@ export interface ServiceOption {
   laborPrice: number;
   discount: number;
   vat_tax: number;
+  labor?: SrvLabor[];
   laborPricing: string;
+  technicians?: JCTechnician[]; 
   subcontractor?: SrvSubcontractor[];
   serviceItems: SrvPartIncluded[];
   labourCost: SrvLabourCost;
   totalCost?: SrvTotalCost;
   availability?: SrvAvailability;
+  authorization: string;
+  status: string;
 }
 
 {/* --------------------------------------------------------- */}
@@ -384,6 +403,7 @@ export interface SubcontractorService {
   hourlyRate?: number;
   availability?: string;
   averageDeliveryTime?: string;
+  serviceTotal?: number;
 }
 
 export interface SubcontractorDataType {
@@ -474,6 +494,7 @@ export type InvBillingAddress = {
   city: string;
   state?: string;
   zipCode: string;
+  poBox?: string;
   country: string;
 };
 
@@ -572,7 +593,7 @@ export interface CashierType {
   kraTaxPin?: string;
   nhifNumber?: string;
   address: string;
-  leaveDates?: string[]; // Array of ISO 8601 date strings
+  leaveDates?: CashierLeaveDates[]; // Array of ISO 8601 date strings
   registrationDate: string; // Assuming ISO 8601 format for date
   commencementDate?: string; // Assuming ISO 8601 format for date
   annualLeaveAmount?: number;
@@ -592,6 +613,11 @@ export interface CashierType {
 interface CashierCertification {
   certificationName: string;
   attachment: string; // File path or URL to certification attachment
+}
+
+interface CashierLeaveDates {
+  id: string;
+  date: string;
 }
 
 {/* ----------------------------------------------------- */}
@@ -733,7 +759,7 @@ export interface GeneralWorkerType {
   kraTaxPin?: string;
   nhifNumber?: string;
   address?: string;
-  leaveDates?: string[]; // Array of leave dates in ISO 8601 format
+  leaveDates?: GeneralWorkerLeaveDates[]; // Array of leave dates in ISO 8601 format
   registrationDate: string; // Assuming ISO 8601 format for date
   commencementDate?: string; // Assuming ISO 8601 format for date
   annualLeaveAmount?: number;
@@ -746,6 +772,10 @@ export interface GeneralWorkerType {
 interface GeneralWorkerCertification {
   certificationName: string;
   attachment: string; // File path or URL to certification document
+}
+interface GeneralWorkerLeaveDates {
+  id: string;
+  date: string;
 }
 
 {/*------------------------------------------------------ */}
@@ -819,16 +849,26 @@ export interface ManagerType {
   initial?: string;
   email: string;
   phoneNumber: string;
-  kraTaxPin: string;
-  nhifNumber: string;
+  kraTaxPin?: string;
+  nhifNumber?: string;
   role: string;
-  address: string;
-  leaveDates: string[];
+  address?: string;
+  leaveDates?: ManagerLeaveDates[];
   registrationDate: string;
-  commencementDate: string;
-  annualLeaveAmount: number;
-  bonusState: string;
+  commencementDate?: string;
+  annualLeaveAmount?: number;
+  bonusState?: string;
   bonusAmount?: number;
+  certifications?: ManagerCertification[];
+}
+
+interface ManagerCertification {
+  certificationName: string;
+  attachment: string; // File path or URL to certification document
+}
+interface ManagerLeaveDates {
+  id: string;
+  date: string;
 }
 
 {/* ---------------------------------------------------- */}
@@ -1027,7 +1067,7 @@ export interface SupervisorType {
   kraTaxPin?: string;
   nhifNumber?: string;
   address?: string;
-  leaveDates?: string[];
+  leaveDates?: SupervisorLeaveDates[];
   registrationDate: string;
   totalSupervisedJobCards?: number;
   totalSupervisedTechnicians?: number;
@@ -1045,6 +1085,11 @@ export interface SupervisorType {
 interface SupervisorCertification {
   certificationName: string;
   attachment: string;
+}
+
+interface SupervisorLeaveDates {
+  id: string;
+  date: string;
 }
 
 {/* -------------------------------------------------- */}
@@ -1086,13 +1131,13 @@ export interface TechnicianDataType {
   firstName: string;
   lastName: string;
   fullName: string;
-  initial?: string;
+  initial: string;
   email?: string;
   phoneNumber: string;
   kraTaxPin?: string;
   nhifNumber?: string;
   address?: string;
-  leaveDates?: string[];
+  leaveDates?: TechnicianLeaveDates[];
   registrationDate: string;
   status?: string;
   totalJobCards?: number;
@@ -1111,6 +1156,11 @@ export interface TechnicianDataType {
 interface TechnicianCertification {
   certificationName: string;
   attachment: string;
+}
+
+interface TechnicianLeaveDates {
+  id: string;
+  date: string;
 }
 
 {/* ------------------------------------------------ */}
@@ -1169,4 +1219,20 @@ interface VehicleDataSupervisor {
   supervisorId: number;
   supervisorName: string;
   department?: string;
+}
+
+{/* --------------------------------------------------------- */}
+{
+  /* Job Card Custom Part Item */
+}
+{/* --------------------------------------------------------- */}
+export interface CustomSrvPart {
+  customInventoryID: string;
+  partName: string;
+  customItemPartID: string;
+  quantity: number;
+  price: number;
+  type: string;
+  discountApplicable: boolean;
+  discount: number;
 }

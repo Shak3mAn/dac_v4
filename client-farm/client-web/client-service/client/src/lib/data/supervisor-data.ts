@@ -11,7 +11,12 @@ export const supervisors = [
     kraTaxPin: "KRA456789",
     nhifNumber: "NHIF678901",
     address: "123 Oak Street, Cityburg",
-    leaveDates: ["2024-08-10", "2024-09-15"],
+    leaveDates:[
+      {
+        id: "202401A",
+        date: "2024-05-13",
+      }
+    ],
     registrationDate: "2024-01-05",
     totalSupervisedJobCards: 150,
     totalSupervisedTechnicians: 12,
@@ -46,7 +51,12 @@ export const supervisors = [
     kraTaxPin: "KRA890123",
     nhifNumber: "NHIF123456",
     address: "456 Pine Avenue, Townsville",
-    leaveDates: ["2024-11-10", "2024-12-15"],
+    leaveDates:[
+      {
+        id: "202401A",
+        date: "2024-05-13",
+      }
+    ],
     registrationDate: "2024-02-01",
     totalSupervisedJobCards: 180,
     totalSupervisedTechnicians: 15,
@@ -81,7 +91,12 @@ export const supervisors = [
     kraTaxPin: "KRA012345",
     nhifNumber: "NHIF678901",
     address: "789 Maple Lane, Villageland",
-    leaveDates: ["2025-03-10", "2025-04-15"],
+    leaveDates:[
+      {
+        id: "202401A",
+        date: "2024-05-13",
+      }
+    ],
     registrationDate: "2024-04-01",
     totalSupervisedJobCards: 120,
     totalSupervisedTechnicians: 10,
@@ -116,7 +131,12 @@ export const supervisors = [
     kraTaxPin: "KRA567890",
     nhifNumber: "NHIF345678",
     address: "123 Oak Lane, Cityburg",
-    leaveDates: ["2024-06-10", "2024-07-15"],
+    leaveDates:[
+      {
+        id: "202401A",
+        date: "2024-05-13",
+      }
+    ],
     registrationDate: "2024-01-20",
     totalJobCardsSupervised: 80,
     totalTechniciansSupervised: 12,
@@ -151,7 +171,12 @@ export const supervisors = [
     kraTaxPin: "KRA234567",
     nhifNumber: "NHIF678901",
     address: "456 Pine Street, Townsville",
-    leaveDates: ["2024-08-20", "2024-09-25"],
+    leaveDates:[
+      {
+        id: "202401A",
+        date: "2024-05-13",
+      }
+    ],
     registrationDate: "2024-02-15",
     totalJobCardsSupervised: 65,
     totalTechniciansSupervised: 10,
@@ -186,7 +211,12 @@ export const supervisors = [
     kraTaxPin: "KRA789012",
     nhifNumber: "NHIF123456",
     address: "789 Maple Lane, Villageland",
-    leaveDates: ["2024-10-10", "2024-11-15"],
+    leaveDates:[
+      {
+        id: "202401A",
+        date: "2024-05-13",
+      }
+    ],
     registrationDate: "2024-03-05",
     totalJobCardsSupervised: 70,
     totalTechniciansSupervised: 14,
@@ -221,7 +251,12 @@ export const supervisors = [
     kraTaxPin: "KRA890123",
     nhifNumber: "NHIF123890",
     address: "101 Pine Avenue, Citytown",
-    leaveDates: ["2024-12-05", "2025-01-10"],
+    leaveDates:[
+      {
+        id: "202401A",
+        date: "2024-05-13",
+      }
+    ],
     registrationDate: "2024-04-10",
     totalJobCardsSupervised: 75,
     totalTechniciansSupervised: 13,
@@ -256,7 +291,12 @@ export const supervisors = [
     kraTaxPin: "KRA456789",
     nhifNumber: "NHIF678901",
     address: "456 Cedar Street, Cityville",
-    leaveDates: ["2025-02-15", "2025-03-20"],
+    leaveDates:[
+      {
+        id: "202401A",
+        date: "2024-05-13",
+      }
+    ],
     registrationDate: "2024-05-01",
     totalJobCardsSupervised: 90,
     totalTechniciansSupervised: 16,
@@ -291,7 +331,12 @@ export const supervisors = [
     kraTaxPin: "KRA890123",
     nhifNumber: "NHIF123456",
     address: "789 Elm Lane, Villagetown",
-    leaveDates: ["2025-06-10", "2025-07-15"],
+    leaveDates:[
+      {
+        id: "202401A",
+        date: "2024-05-13",
+      }
+    ],
     registrationDate: "2024-06-01",
     totalJobCardsSupervised: 85,
     totalTechniciansSupervised: 14,
@@ -326,7 +371,12 @@ export const supervisors = [
     kraTaxPin: "KRA012345",
     nhifNumber: "NHIF678901",
     address: "101 Birch Street, Villageland",
-    leaveDates: ["2025-09-10", "2025-10-15"],
+    leaveDates:[
+      {
+        id: "202401A",
+        date: "2024-05-13",
+      }
+    ],
     registrationDate: "2024-07-01",
     totalJobCardsSupervised: 75,
     totalTechniciansSupervised: 12,

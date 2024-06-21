@@ -46,7 +46,6 @@ import {
 } from "@/components/ui/form";
 import { GeneralTooltip } from "@/components/misc/general-tooltip";
 
-
 import { JCServiceDetail } from "@/lib/types/types";
 import { jc_card_view_eg } from "@/lib/data/general/jc-card-view";
 
@@ -163,7 +162,8 @@ export const ServiceAuthorizations: React.FC<AddAuthorizationFormProp> = () => {
             <Dialog>
                 <DialogTrigger asChild>
 
-                    {sideBarToggle.isOpen ? (<>
+                    {sideBarToggle.isOpen ? (
+                        <>
                         <GeneralTooltip label="Authorize">
                             <Button variant={"outline"} size={"icon"}>
                                 <div className='flex items-center'>
@@ -171,7 +171,8 @@ export const ServiceAuthorizations: React.FC<AddAuthorizationFormProp> = () => {
                                 </div>
                             </Button>
                         </GeneralTooltip>
-                    </>) : (
+                    </>
+                    ) : (
                         <Button variant={"outline"} size="default">
                             <div className="flex items-center">Authorize</div>
                         </Button>

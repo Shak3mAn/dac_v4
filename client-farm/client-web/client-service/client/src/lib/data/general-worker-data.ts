@@ -1,6 +1,6 @@
-export const admins = [
+export const generalEmployees = [
   {
-    adminId: "8f2bd873-32cb-4d82-bae7-1a1f5c8a9c20",
+    employeeId: "8f2bd873-32cb-4d82-bae7-1a1f5c8a9c20",
     dateOfBirth: "1985-05-20",
     fullName: "Jessica Smith",
     firstName: "Jessica",
@@ -11,7 +11,16 @@ export const admins = [
     kraTaxPin: "KRA567890",
     nhifNumber: "NHIF123456",
     address: "456 Maple Lane, Citytown",
-    leaveDates: ["2024-03-10", "2024-04-15"],
+    leaveDates: [
+      {
+        id: "202401A",
+        date: "2024-03-10",
+      },
+      {
+        id: "202402B",
+        date: "2024-04-15",
+      },
+    ],
     registrationDate: "2024-01-01",
     commencementDate: "2024-02-01",
     annualLeaveAmount: 25,
@@ -26,7 +35,7 @@ export const admins = [
     ],
   },
   {
-    adminId: "c19ebc8a-f62f-4ea1-8a3b-3ecfe1e2ab5a",
+    employeeId: "c19ebc8a-f62f-4ea1-8a3b-3ecfe1e2ab5a",
     dateOfBirth: "1989-08-15",
     fullName: "Michael Johnson",
     firstName: "Michael",
@@ -37,7 +46,16 @@ export const admins = [
     kraTaxPin: "KRA234567",
     nhifNumber: "NHIF567890",
     address: "789 Elm Street, Villagetown",
-    leaveDates: ["2024-06-10", "2024-07-15"],
+    leaveDates: [
+      {
+        id: "202401A",
+        date: "2024-03-10",
+      },
+      {
+        id: "202402B",
+        date: "2024-04-15",
+      },
+    ],
     registrationDate: "2024-03-01",
     commencementDate: "2024-04-01",
     annualLeaveAmount: 22,
@@ -52,7 +70,7 @@ export const admins = [
     ],
   },
   {
-    adminId: "1279d71b-4aaf-4be5-8a8b-26ec858eaa01",
+    employeeId: "1279d71b-4aaf-4be5-8a8b-26ec858eaa01",
     dateOfBirth: "1987-12-10",
     fullName: "Amanda White",
     firstName: "Amanda",
@@ -63,7 +81,16 @@ export const admins = [
     kraTaxPin: "KRA678901",
     nhifNumber: "NHIF123890",
     address: "101 Birch Lane, Townsville",
-    leaveDates: ["2025-01-10", "2025-02-15"],
+    leaveDates: [
+      {
+        id: "202401A",
+        date: "2024-03-10",
+      },
+      {
+        id: "202402B",
+        date: "2024-04-15",
+      },
+    ],
     registrationDate: "2024-08-01",
     commencementDate: "2024-09-01",
     annualLeaveAmount: 20,
@@ -78,7 +105,7 @@ export const admins = [
     ],
   },
   {
-    adminId: "5a26f7d8-935c-4042-98f8-6b209bbfffd3",
+    employeeId: "5a26f7d8-935c-4042-98f8-6b209bbfffd3",
     dateOfBirth: "1986-06-25",
     fullName: "Charles Turner",
     firstName: "Charles",
@@ -89,7 +116,16 @@ export const admins = [
     kraTaxPin: "KRA890123",
     nhifNumber: "NHIF123456",
     address: "456 Oak Avenue, Cityville",
-    leaveDates: ["2025-03-10", "2025-04-15"],
+    leaveDates: [
+      {
+        id: "202401A",
+        date: "2024-03-10",
+      },
+      {
+        id: "202402B",
+        date: "2024-04-15",
+      },
+    ],
     registrationDate: "2024-10-01",
     commencementDate: "2024-11-01",
     annualLeaveAmount: 18,
@@ -104,7 +140,7 @@ export const admins = [
     ],
   },
   {
-    adminId: "69bf9bc3-2c32-40f9-927c-aa852e51d918",
+    employeeId: "69bf9bc3-2c32-40f9-927c-aa852e51d918",
     dateOfBirth: "1990-03-18",
     fullName: "Olivia Martin",
     firstName: "Olivia",
@@ -115,7 +151,16 @@ export const admins = [
     kraTaxPin: "KRA012345",
     nhifNumber: "NHIF678901",
     address: "789 Cedar Street, Cityburg",
-    leaveDates: ["2025-06-10", "2025-07-15"],
+    leaveDates: [
+      {
+        id: "202401A",
+        date: "2024-03-10",
+      },
+      {
+        id: "202402B",
+        date: "2024-04-15",
+      },
+    ],
     registrationDate: "2024-12-01",
     commencementDate: "2025-01-01",
     annualLeaveAmount: 25,
@@ -129,9 +174,6 @@ export const admins = [
       },
     ],
   },
-];
-
-export const generalEmployees = [
   {
     employeeId: "b8094f04-7749-4b02-a117-78a5cd29cb52",
     dateOfBirth: "1990-09-18",
@@ -144,7 +186,16 @@ export const generalEmployees = [
     kraTaxPin: "KRA567890",
     nhifNumber: "NHIF123456",
     address: "456 Oak Lane, Cityville",
-    leaveDates: ["2024-07-10", "2024-08-15"],
+    leaveDates: [
+      {
+        id: "202401A",
+        date: "2024-03-10",
+      },
+      {
+        id: "202402B",
+        date: "2024-04-15",
+      },
+    ],
     registrationDate: "2024-03-01",
     commencementDate: "2024-04-01",
     annualLeaveAmount: 18,
@@ -170,7 +221,16 @@ export const generalEmployees = [
     kraTaxPin: "KRA234567",
     nhifNumber: "NHIF567890",
     address: "789 Cedar Street, Cityburg",
-    leaveDates: ["2025-03-10", "2025-04-15"],
+    leaveDates: [
+      {
+        id: "202401A",
+        date: "2024-03-10",
+      },
+      {
+        id: "202402B",
+        date: "2024-04-15",
+      },
+    ],
     registrationDate: "2024-10-01",
     commencementDate: "2024-11-01",
     annualLeaveAmount: 20,
@@ -196,7 +256,16 @@ export const generalEmployees = [
     kraTaxPin: "KRA678901",
     nhifNumber: "NHIF123890",
     address: "101 Birch Lane, Townsville",
-    leaveDates: ["2025-01-10", "2025-02-15"],
+    leaveDates: [
+      {
+        id: "202401A",
+        date: "2024-03-10",
+      },
+      {
+        id: "202402B",
+        date: "2024-04-15",
+      },
+    ],
     registrationDate: "2024-08-01",
     commencementDate: "2024-09-01",
     annualLeaveAmount: 22,
@@ -222,7 +291,16 @@ export const generalEmployees = [
     kraTaxPin: "KRA890123",
     nhifNumber: "NHIF123456",
     address: "456 Elm Avenue, Villagetown",
-    leaveDates: ["2025-06-10", "2025-07-15"],
+    leaveDates: [
+      {
+        id: "202401A",
+        date: "2024-03-10",
+      },
+      {
+        id: "202402B",
+        date: "2024-04-15",
+      },
+    ],
     registrationDate: "2024-12-01",
     commencementDate: "2025-01-01",
     annualLeaveAmount: 25,
@@ -248,7 +326,16 @@ export const generalEmployees = [
     kraTaxPin: "KRA012345",
     nhifNumber: "NHIF678901",
     address: "789 Birch Street, Cityburg",
-    leaveDates: ["2025-09-10", "2025-10-15"],
+    leaveDates: [
+      {
+        id: "202401A",
+        date: "2024-03-10",
+      },
+      {
+        id: "202402B",
+        date: "2024-04-15",
+      },
+    ],
     registrationDate: "2025-03-01",
     commencementDate: "2025-04-01",
     annualLeaveAmount: 18,
@@ -274,7 +361,16 @@ export const generalEmployees = [
     kraTaxPin: "KRA234567",
     nhifNumber: "NHIF567890",
     address: "101 Cedar Lane, Townsville",
-    leaveDates: ["2025-12-10", "2026-01-15"],
+    leaveDates: [
+      {
+        id: "202401A",
+        date: "2024-03-10",
+      },
+      {
+        id: "202402B",
+        date: "2024-04-15",
+      },
+    ],
     registrationDate: "2025-08-01",
     commencementDate: "2025-09-01",
     annualLeaveAmount: 22,
@@ -300,7 +396,16 @@ export const generalEmployees = [
     kraTaxPin: "KRA678901",
     nhifNumber: "NHIF123890",
     address: "456 Maple Avenue, Citytown",
-    leaveDates: ["2026-03-10", "2026-04-15"],
+    leaveDates: [
+      {
+        id: "202401A",
+        date: "2024-03-10",
+      },
+      {
+        id: "202402B",
+        date: "2024-04-15",
+      },
+    ],
     registrationDate: "2025-10-01",
     commencementDate: "2025-11-01",
     annualLeaveAmount: 20,

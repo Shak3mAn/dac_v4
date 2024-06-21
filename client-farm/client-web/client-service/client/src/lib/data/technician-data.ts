@@ -1,4 +1,4 @@
-export const technicians = [
+export const technicians_data = [
   {
     technicianId: "e71a3a54-98a2-4f7d-98b9-3e4c82a8747c",
     dateOfBirth: "1985-03-12",
@@ -11,7 +11,16 @@ export const technicians = [
     kraTaxPin: "KRA123456",
     nhifNumber: "NHIF789012",
     address: "123 Main Street, Cityville",
-    leaveDates: ["2024-07-15", "2024-08-20"],
+    leaveDates: [
+      {
+        id: "202401A",
+        date: "2024-06-09"
+      },
+      {
+        id: "202402A",
+        date: "2024-07-10"
+      }
+    ],
     registrationDate: "2024-02-01",
     status: "Successful",
     totalJobCards: 50,
@@ -47,7 +56,16 @@ export const technicians = [
     kraTaxPin: "KRA987654",
     nhifNumber: "NHIF345678",
     address: "456 Oak Avenue, Townsville",
-    leaveDates: ["2024-09-10", "2024-10-15"],
+    leaveDates: [
+      {
+        id: "202401A",
+        date: "2024-06-09"
+      },
+      {
+        id: "202402A",
+        date: "2024-07-10"
+      }
+    ],
     registrationDate: "2024-03-10",
     status: "Pending",
     totalJobCards: 30,
@@ -83,7 +101,16 @@ export const technicians = [
     kraTaxPin: "KRA654321",
     nhifNumber: "NHIF123456",
     address: "789 Pine Street, Villageland",
-    leaveDates: ["2024-11-05", "2024-12-10"],
+    leaveDates: [
+      {
+        id: "202401A",
+        date: "2024-06-09"
+      },
+      {
+        id: "202402A",
+        date: "2024-07-10"
+      }
+    ],
     registrationDate: "2024-04-05",
     status: "Failed",
     totalJobCards: 40,
@@ -119,7 +146,16 @@ export const technicians = [
     kraTaxPin: "KRA777888",
     nhifNumber: "NHIF345678",
     address: "123 Oak Lane, Cityburg",
-    leaveDates: ["2024-06-10", "2024-07-15"],
+    leaveDates: [
+      {
+        id: "202401A",
+        date: "2024-06-09"
+      },
+      {
+        id: "202402A",
+        date: "2024-07-10"
+      }
+    ],
     registrationDate: "2024-01-20",
     status: "Successful",
     totalJobCards: 60,
@@ -155,7 +191,16 @@ export const technicians = [
     kraTaxPin: "KRA654789",
     nhifNumber: "NHIF987654",
     address: "456 Pine Street, Townsville",
-    leaveDates: ["2024-08-20", "2024-09-25"],
+    leaveDates: [
+      {
+        id: "202401A",
+        date: "2024-06-09"
+      },
+      {
+        id: "202402A",
+        date: "2024-07-10"
+      }
+    ],
     registrationDate: "2024-02-15",
     status: "Pending",
     totalJobCards: 35,
@@ -191,7 +236,16 @@ export const technicians = [
     kraTaxPin: "KRA888777",
     nhifNumber: "NHIF123890",
     address: "789 Maple Lane, Villageland",
-    leaveDates: ["2024-10-10", "2024-11-15"],
+    leaveDates: [
+      {
+        id: "202401A",
+        date: "2024-06-09"
+      },
+      {
+        id: "202402A",
+        date: "2024-07-10"
+      }
+    ],
     registrationDate: "2024-03-05",
     status: "Failed",
     totalJobCards: 45,
@@ -227,7 +281,16 @@ export const technicians = [
     kraTaxPin: "KRA987123",
     nhifNumber: "NHIF456890",
     address: "101 Pine Avenue, Citytown",
-    leaveDates: ["2024-12-05", "2025-01-10"],
+    leaveDates: [
+      {
+        id: "202401A",
+        date: "2024-06-09"
+      },
+      {
+        id: "202402A",
+        date: "2024-07-10"
+      }
+    ],
     registrationDate: "2024-04-10",
     status: "Successful",
     totalJobCards: 55,
@@ -263,7 +326,16 @@ export const technicians = [
     kraTaxPin: "KRA345678",
     nhifNumber: "NHIF890123",
     address: "789 Cedar Lane, Villagetown",
-    leaveDates: ["2025-03-10", "2025-04-15"],
+    leaveDates: [
+      {
+        id: "202401A",
+        date: "2024-06-09"
+      },
+      {
+        id: "202402A",
+        date: "2024-07-10"
+      }
+    ],
     registrationDate: "2024-05-15",
     status: "Pending",
     totalJobCards: 40,
@@ -299,7 +371,16 @@ export const technicians = [
     kraTaxPin: "KRA876543",
     nhifNumber: "NHIF234567",
     address: "456 Birch Street, Cityburg",
-    leaveDates: ["2025-05-05", "2025-06-10"],
+    leaveDates: [
+      {
+        id: "202401A",
+        date: "2024-06-09"
+      },
+      {
+        id: "202402A",
+        date: "2024-07-10"
+      }
+    ],
     registrationDate: "2024-06-01",
     status: "Failed",
     totalJobCards: 35,
@@ -335,7 +416,16 @@ export const technicians = [
     kraTaxPin: "KRA234567",
     nhifNumber: "NHIF678901",
     address: "789 Elm Lane, Villagetown",
-    leaveDates: ["2025-07-20", "2025-08-25"],
+    leaveDates: [
+      {
+        id: "202401A",
+        date: "2024-06-09"
+      },
+      {
+        id: "202402A",
+        date: "2024-07-10"
+      }
+    ],
     registrationDate: "2024-07-10",
     status: "Successful",
     totalJobCards: 50,
@@ -371,7 +461,16 @@ export const technicians = [
     kraTaxPin: "KRA789012",
     nhifNumber: "NHIF890123",
     address: "456 Cedar Lane, Cityville",
-    leaveDates: ["2025-09-10", "2025-10-15"],
+    leaveDates: [
+      {
+        id: "202401A",
+        date: "2024-06-09"
+      },
+      {
+        id: "202402A",
+        date: "2024-07-10"
+      }
+    ],
     registrationDate: "2024-08-05",
     status: "Pending",
     totalJobCards: 38,
@@ -407,7 +506,16 @@ export const technicians = [
     kraTaxPin: "KRA012345",
     nhifNumber: "NHIF678901",
     address: "101 Birch Street, Villageland",
-    leaveDates: ["2025-11-05", "2025-12-10"],
+    leaveDates: [
+      {
+        id: "202401A",
+        date: "2024-06-09"
+      },
+      {
+        id: "202402A",
+        date: "2024-07-10"
+      }
+    ],
     registrationDate: "2024-09-01",
     status: "Failed",
     totalJobCards: 42,
@@ -443,7 +551,16 @@ export const technicians = [
     kraTaxPin: "KRA890123",
     nhifNumber: "NHIF123456",
     address: "789 Elm Avenue, Citytown",
-    leaveDates: ["2026-01-05", "2026-02-10"],
+    leaveDates: [
+      {
+        id: "202401A",
+        date: "2024-06-09"
+      },
+      {
+        id: "202402A",
+        date: "2024-07-10"
+      }
+    ],
     registrationDate: "2024-10-10",
     status: "Successful",
     totalJobCards: 48,

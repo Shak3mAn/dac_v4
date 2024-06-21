@@ -36,7 +36,7 @@ import { CustomerDetails, JobCardSBToggle, JobCardServicesSummary, PosJobSearchS
 import { usePosSidebarToggle } from "@/store/use-sidebar-toggle";
 import { GeneralTooltip } from "@/components/misc/general-tooltip";
 import { general_services } from "@/lib/data/general-services";
-import { service_data } from "@/lib/data/service-data";
+import { general_service_cat_data } from "@/lib/data/service-data";
 
 interface Service {
     id: string;
@@ -190,22 +190,17 @@ const NewJobCardPage = () => {
                                         >
                                             <div className="pt-6">
                                                 <span className="text-md text-primary font-semibold">
-                                                    {service.category}
+                                                    {service.category} 
                                                 </span>
                                             </div>
                                             <div className="flex-col-reverse justify-end items-end flex pb-6">
-                                                {service_data.map((item) => (
-                                                    <div key={item.catId}>
-                                                        {service.catId === item.catId && (
+                                                
                                                             <div className="space-x-1.5 flex items-center justify-center">
                                                                 <ArrowRight className="h-4 w-4" />
                                                                 <span className="text-sm font-normal text-primary">
-                                                                    View All {item.services.length}
+                                                                    View All {service.services.length}
                                                                 </span>
                                                             </div>
-                                                        )}
-                                                    </div>
-                                                ))}
                                             </div>
                                         </div>
                                     </div>
@@ -217,7 +212,7 @@ const NewJobCardPage = () => {
                             </div>
                             {/* Selected Category Service List */}
                             <div>
-                                {service_data.map((category) => (
+                                {general_service_cat_data.map((category) => (
                                     <div key={category.catId}>
                                         {selectedCategory === category.catId ? (
                                             <div className="space-y-4 flex flex-col">

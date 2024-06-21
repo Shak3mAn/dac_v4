@@ -1,4 +1,4 @@
-export const jc_card_view_eg = {
+export const jc_card_view_eg_2 = {
   jobCard: {
     jobCardID: "JC12345",
     vehicleDetails: {
@@ -206,7 +206,7 @@ export const jc_card_view_eg = {
   },
 };
 
-export const jc_card_view_eg_2 = {
+export const jc_card_view_eg = {
   jobCard: {
     jobCardID: "JC12345",
     vehicleDetails: {

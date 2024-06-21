@@ -2,6 +2,7 @@
 
 import axios from "axios";
 import { Edit, Hammer, MoreHorizontal, User, Trash } from "lucide-react";
+import { PiEngine } from "react-icons/pi";
 import { useParams, useRouter } from "next/navigation";
 import React, { useState } from "react";
 
@@ -44,7 +45,7 @@ export const CellAction: React.FC<CellActionProps> = ({
             router.refresh();
             serviceOption.onDeleteServiceItem(data.id);
             toast({
-                title: "Service: Deleted",
+                title: `Service Item: ${data.name} Deleted`,
                 description: `${currentDateTime}`,
                 action: (
                     <ToastAction altText="Goto schedule to undo">Undo</ToastAction>
@@ -85,7 +86,7 @@ export const CellAction: React.FC<CellActionProps> = ({
                 <DropdownMenuContent align="end">
                     <DropdownMenuLabel>Actions</DropdownMenuLabel>
                     <DropdownMenuItem onClick={() => console.log("Profile")}>
-                        <Hammer className="mr-2 h-4 w-4" /> Service
+                        <PiEngine className="mr-2 h-4 w-4" /> Item
                     </DropdownMenuItem>
                     <DropdownMenuItem onClick={() => console.log("Edit")}>
                         <Edit className="mr-2 h-4 w-4" /> Update

@@ -12,7 +12,7 @@ export const subcontractor_data = [
     subcontractorCategoryServices: "Mechanical Services",
     servicesOffered: [
       {
-        serviceID: "SRV001A",
+        serviceID: "SUBCSRV001A",
         serviceName: "Engine Overhaul",
         serviceCategory: "Engine Service",
         description:
@@ -22,7 +22,7 @@ export const subcontractor_data = [
         averageDeliveryTime: "3 days",
       },
       {
-        serviceID: "SRV002A",
+        serviceID: "SUBCSRV002A",
         serviceName: "Transmission Repair",
         serviceCategory: "Transmission Service",
         description:
@@ -32,7 +32,7 @@ export const subcontractor_data = [
         averageDeliveryTime: "2 days",
       },
       {
-        serviceID: "SRV003A",
+        serviceID: "SUBCSRV003A",
         serviceName: "Suspension System Upgrade",
         serviceCategory: "Suspension Service",
         description:
@@ -59,7 +59,7 @@ export const subcontractor_data = [
     subcontractorCategoryServices: "Automotive Repairs",
     servicesOffered: [
       {
-        serviceID: "SRV001B",
+        serviceID: "SUBCSRV001B",
         serviceName: "Brake Service",
         serviceCategory: "Brake Service",
         description:
@@ -69,7 +69,7 @@ export const subcontractor_data = [
         averageDeliveryTime: "2 days",
       },
       {
-        serviceID: "SRV002B",
+        serviceID: "SUBCSRV002B",
         serviceName: "Wheel Alignment",
         serviceCategory: "Alignment Service",
         description:
@@ -79,7 +79,7 @@ export const subcontractor_data = [
         averageDeliveryTime: "1 day",
       },
       {
-        serviceID: "SRV003B",
+        serviceID: "SUBCSRV003B",
         serviceName: "Exhaust System Repair",
         serviceCategory: "Exhaust Service",
         description:
@@ -106,7 +106,7 @@ export const subcontractor_data = [
     subcontractorCategoryServices: "High-Performance Upgrades",
     servicesOffered: [
       {
-        serviceID: "SRV001C",
+        serviceID: "SUBCSRV001C",
         serviceName: "Turbocharger Installation",
         serviceCategory: "Engine Performance",
         description:
@@ -116,7 +116,7 @@ export const subcontractor_data = [
         averageDeliveryTime: "5 days",
       },
       {
-        serviceID: "SRV002C",
+        serviceID: "SUBCSRV002C",
         serviceName: "Suspension Tuning",
         serviceCategory: "Suspension Service",
         description:
@@ -126,7 +126,7 @@ export const subcontractor_data = [
         averageDeliveryTime: "3 days",
       },
       {
-        serviceID: "SRV003C",
+        serviceID: "SUBCSRV003C",
         serviceName: "Custom Exhaust Fabrication",
         serviceCategory: "Exhaust Service",
         description:
@@ -153,7 +153,7 @@ export const subcontractor_data = [
     subcontractorCategoryServices: "Auto Parts Supplier",
     servicesOffered: [
       {
-        serviceID: "SRV001D",
+        serviceID: "SUBCSRV001D",
         serviceName: "Brake Pads",
         serviceCategory: "Auto Parts",
         description:
@@ -163,7 +163,7 @@ export const subcontractor_data = [
         averageDeliveryTime: "1 day",
       },
       {
-        serviceID: "SRV002D",
+        serviceID: "SUBCSRV002D",
         serviceName: "Oil Filters",
         serviceCategory: "Auto Parts",
         description: "Supply of oil filters compatible with most car engines",
@@ -189,7 +189,7 @@ export const subcontractor_data = [
     subcontractorCategoryServices: "Engine Specialists",
     servicesOffered: [
       {
-        serviceID: "SRV001E",
+        serviceID: "SUBCSRV001E",
         serviceName: "Engine Diagnosis",
         serviceCategory: "Engine Service",
         description:
@@ -199,7 +199,7 @@ export const subcontractor_data = [
         averageDeliveryTime: "2 days",
       },
       {
-        serviceID: "SRV002E",
+        serviceID: "SUBCSRV002E",
         serviceName: "Engine Rebuild",
         serviceCategory: "Engine Service",
         description:
@@ -226,7 +226,7 @@ export const subcontractor_data = [
     subcontractorCategoryServices: "Auto Glass Services",
     servicesOffered: [
       {
-        serviceID: "SRV001G",
+        serviceID: "SUBCSRV001G",
         serviceName: "Windshield Replacement",
         serviceCategory: "Auto Glass Service",
         description:
@@ -236,7 +236,7 @@ export const subcontractor_data = [
         averageDeliveryTime: "2 days",
       },
       {
-        serviceID: "SRV002G",
+        serviceID: "SUBCSRV002G",
         serviceName: "Window Tinting",
         serviceCategory: "Auto Glass Service",
         description:
@@ -263,7 +263,7 @@ export const subcontractor_data = [
     subcontractorCategoryServices: "Electric Vehicle Services",
     servicesOffered: [
       {
-        serviceID: "SRV001H",
+        serviceID: "SUBCSRV001H",
         serviceName: "Battery Inspection & Maintenance",
         serviceCategory: "Battery Service",
         description:
@@ -273,7 +273,7 @@ export const subcontractor_data = [
         averageDeliveryTime: "3 days",
       },
       {
-        serviceID: "SRV002H",
+        serviceID: "SUBCSRV002H",
         serviceName: "Charging Station Installation",
         serviceCategory: "Charging Station Service",
         description:
@@ -300,7 +300,7 @@ export const subcontractor_data = [
     subcontractorCategoryServices: "Car Detailing Services",
     servicesOffered: [
       {
-        serviceID: "SRV001I",
+        serviceID: "SUBCSRV001I",
         serviceName: "Exterior Detailing",
         serviceCategory: "Detailing Service",
         description:
@@ -310,7 +310,7 @@ export const subcontractor_data = [
         averageDeliveryTime: "1 day",
       },
       {
-        serviceID: "SRV002I",
+        serviceID: "SUBCSRV002I",
         serviceName: "Interior Detailing",
         serviceCategory: "Detailing Service",
         description:
@@ -337,7 +337,7 @@ export const subcontractor_data = [
     subcontractorCategoryServices: "Auto Electrical Services",
     servicesOffered: [
       {
-        serviceID: "SRV001J",
+        serviceID: "SUBCSRV001J",
         serviceName: "Electrical Diagnostics",
         serviceCategory: "Electrical Service",
         description:
@@ -347,7 +347,7 @@ export const subcontractor_data = [
         averageDeliveryTime: "2 days",
       },
       {
-        serviceID: "SRV002J",
+        serviceID: "SUBCSRV002J",
         serviceName: "Wiring Harness Replacement",
         serviceCategory: "Electrical Service",
         description:
@@ -374,7 +374,7 @@ export const subcontractor_data = [
     subcontractorCategoryServices: "Auto Glass Services",
     servicesOffered: [
       {
-        serviceID: "SRV001G",
+        serviceID: "SUBCSRV001G",
         serviceName: "Windshield Replacement",
         serviceCategory: "Auto Glass Service",
         description:
@@ -384,7 +384,7 @@ export const subcontractor_data = [
         averageDeliveryTime: "2 days",
       },
       {
-        serviceID: "SRV002G",
+        serviceID: "SUBCSRV002G",
         serviceName: "Window Tinting",
         serviceCategory: "Auto Glass Service",
         description:
@@ -411,7 +411,7 @@ export const subcontractor_data = [
     subcontractorCategoryServices: "Electric Vehicle Services",
     servicesOffered: [
       {
-        serviceID: "SRV001H",
+        serviceID: "SUBCSRV001H",
         serviceName: "Battery Inspection & Maintenance",
         serviceCategory: "Battery Service",
         description:
@@ -421,7 +421,7 @@ export const subcontractor_data = [
         averageDeliveryTime: "3 days",
       },
       {
-        serviceID: "SRV002H",
+        serviceID: "SUBCSRV002H",
         serviceName: "Charging Station Installation",
         serviceCategory: "Charging Station Service",
         description:
@@ -448,7 +448,7 @@ export const subcontractor_data = [
     subcontractorCategoryServices: "Car Detailing Services",
     servicesOffered: [
       {
-        serviceID: "SRV001I",
+        serviceID: "SUBCSRV001I",
         serviceName: "Exterior Detailing",
         serviceCategory: "Detailing Service",
         description:
@@ -458,7 +458,7 @@ export const subcontractor_data = [
         averageDeliveryTime: "1 day",
       },
       {
-        serviceID: "SRV002I",
+        serviceID: "SUBCSRV002I",
         serviceName: "Interior Detailing",
         serviceCategory: "Detailing Service",
         description:
@@ -485,7 +485,7 @@ export const subcontractor_data = [
     subcontractorCategoryServices: "Auto Electrical Services",
     servicesOffered: [
       {
-        serviceID: "SRV001J",
+        serviceID: "SUBCSRV001J",
         serviceName: "Electrical Diagnostics",
         serviceCategory: "Electrical Service",
         description:
@@ -495,7 +495,7 @@ export const subcontractor_data = [
         averageDeliveryTime: "2 days",
       },
       {
-        serviceID: "SRV002J",
+        serviceID: "SUBCSRV002J",
         serviceName: "Wiring Harness Replacement",
         serviceCategory: "Electrical Service",
         description:
@@ -522,7 +522,7 @@ export const subcontractor_data = [
     subcontractorCategoryServices: "Auto Painting Services",
     servicesOffered: [
       {
-        serviceID: "SRV001K",
+        serviceID: "SUBCSRV001K",
         serviceName: "Full Body Paint",
         serviceCategory: "Painting Service",
         description:
@@ -532,7 +532,7 @@ export const subcontractor_data = [
         averageDeliveryTime: "5 days",
       },
       {
-        serviceID: "SRV002K",
+        serviceID: "SUBCSRV002K",
         serviceName: "Scratch Repair",
         serviceCategory: "Painting Service",
         description:
@@ -559,7 +559,7 @@ export const subcontractor_data = [
     subcontractorCategoryServices: "Interior Customization",
     servicesOffered: [
       {
-        serviceID: "SRV001L",
+        serviceID: "SUBCSRV001L",
         serviceName: "Leather Seat Installation",
         serviceCategory: "Interior Service",
         description:
@@ -569,7 +569,7 @@ export const subcontractor_data = [
         averageDeliveryTime: "4 days",
       },
       {
-        serviceID: "SRV002L",
+        serviceID: "SUBCSRV002L",
         serviceName: "Custom Dashboard Fabrication",
         serviceCategory: "Interior Service",
         description:
@@ -596,7 +596,7 @@ export const subcontractor_data = [
     subcontractorCategoryServices: "Car Audio Services",
     servicesOffered: [
       {
-        serviceID: "SRV001M",
+        serviceID: "SUBCSRV001M",
         serviceName: "Speaker Installation",
         serviceCategory: "Audio Service",
         description:
@@ -606,7 +606,7 @@ export const subcontractor_data = [
         averageDeliveryTime: "1 day",
       },
       {
-        serviceID: "SRV002M",
+        serviceID: "SUBCSRV002M",
         serviceName: "Subwoofer Installation",
         serviceCategory: "Audio Service",
         description:
@@ -633,7 +633,7 @@ export const subcontractor_data = [
     subcontractorCategoryServices: "Wheel and Rim Services",
     servicesOffered: [
       {
-        serviceID: "SRV001N",
+        serviceID: "SUBCSRV001N",
         serviceName: "Rim Repair",
         serviceCategory: "Rim Service",
         description:
@@ -643,7 +643,7 @@ export const subcontractor_data = [
         averageDeliveryTime: "3 days",
       },
       {
-        serviceID: "SRV002N",
+        serviceID: "SUBCSRV002N",
         serviceName: "Custom Rim Painting",
         serviceCategory: "Rim Service",
         description:
@@ -670,7 +670,7 @@ export const subcontractor_data = [
     subcontractorCategoryServices: "Hybrid Vehicle Services",
     servicesOffered: [
       {
-        serviceID: "SRV001O",
+        serviceID: "SUBCSRV001O",
         serviceName: "Hybrid Battery Replacement",
         serviceCategory: "Battery Service",
         description:
@@ -680,7 +680,7 @@ export const subcontractor_data = [
         averageDeliveryTime: "4 days",
       },
       {
-        serviceID: "SRV002O",
+        serviceID: "SUBCSRV002O",
         serviceName: "Hybrid System Diagnostics",
         serviceCategory: "Electrical Service",
         description:

@@ -19,7 +19,7 @@ import { usePosSidebarToggle } from "@/store/use-sidebar-toggle";
 import { Separator } from "@/components/ui/separator";
 import { Input } from "@/components/ui/input";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
-import { service_data } from "@/lib/data/service-data";
+import { general_service_cat_data } from "@/lib/data/service-data";
 
 interface PosSidebarProps {
   // Add any additional props if necessary
@@ -98,7 +98,7 @@ export const PosJobSearchSidebar: React.FC<PosSidebarProps> = () => {
 
               <ScrollArea  className="h-screen my-2">
                 <div className="space-y-[1px] pr-4 py-2">
-                  {service_data.map((service) => (
+                  {general_service_cat_data.map((service) => (
                     <div
                       key={service.catId}
                       className={cn(

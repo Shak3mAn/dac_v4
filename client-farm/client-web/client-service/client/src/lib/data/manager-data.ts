@@ -12,11 +12,26 @@ export const manager = [
     nhifNumber: "NHIF234567",
     role: "Manager",
     address: "123 Maple Street, Cityville",
-    leaveDates: ["2025-01-10", "2025-02-15"],
+    leaveDates:  [
+      {
+        id: "202401A",
+        date: "2024-03-10",
+      },
+      {
+        id: "202402B",
+        date: "2024-04-15",
+      },
+    ],
     registrationDate: "2024-01-01",
     commencementDate: "2024-02-01",
     annualLeaveAmount: 25,
     bonusState: "Eligible",
     bonusAmount: 2500.0,
+    certifications: [
+      {
+        certificationName: "MBA Certification",
+        attachment: "mba_certificate.pdf",
+      },
+    ],
   },
 ];

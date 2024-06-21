@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
-import { Search } from 'lucide-react';
+import { Plus, Search } from 'lucide-react';
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -168,7 +168,7 @@ export const AddService: React.FC<AddServiceFormProps> = () => {
                             >
                                 <GeneralTooltip label="Service">
                                     <div className='flex items-center'>
-                                        <Search className='h-4 w-4' />
+                                        <Plus className='h-4 w-4' />
                                     </div>
                                 </GeneralTooltip>
                             </Button>
@@ -181,7 +181,7 @@ export const AddService: React.FC<AddServiceFormProps> = () => {
                                 className=''
                             >
                                 <div className='flex items-center'>
-                                    <Search className='h-4 w-4 mr-2' />
+                                    <Plus className='h-4 w-4 mr-2' />
                                 </div>
                                 <div>
                                     Service
@@ -196,6 +196,11 @@ export const AddService: React.FC<AddServiceFormProps> = () => {
                             Utilize the categories to efficiently search for services.
                         </DialogDescription>
                     </DialogHeader>
+
+                    <div className='-mt-2 py-2 w-full'>
+                        <Separator orientation="horizontal" className="h-[0.5px]" />
+                    </div>
+
                     <Form {...form}>
                         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
                             <SearchCategory />

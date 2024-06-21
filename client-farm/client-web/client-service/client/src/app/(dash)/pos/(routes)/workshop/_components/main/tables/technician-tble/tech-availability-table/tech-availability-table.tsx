@@ -1,10 +1,10 @@
-import { technicians } from "@/lib/data/technician-data";
+import { technicians_data } from "@/lib/data/technician-data";
 
 import { TechAvailabilityColumn } from "./columns/tech-availability-columns";
 import { TechAvailabilityClient } from "./clients/tech-availability-clients";
 
 export const TechAvailabilityTable = () => {
-  const formattedTechAvailability: TechAvailabilityColumn[] = technicians.map(
+  const formattedTechAvailability: TechAvailabilityColumn[] = technicians_data.map(
     (item) => ({
       id: item.technicianId,
       fullName: item.fullName,

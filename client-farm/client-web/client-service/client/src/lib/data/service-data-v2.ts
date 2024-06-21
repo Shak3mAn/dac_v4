@@ -11,7 +11,15 @@ export const service_comp_data = [
     laborPrice: 5000,
     discount: 0,
     vat_tax: 3200,
+    authorization: "Authorized",
+    status: "InProgress",
     laborPricing: "standard",
+    technicians: [
+      {
+        id: "Tech001",
+        name: "Mike Smith",
+      },
+    ],
     subcontractor: [
       {
         subcontractorID: "SUBC010",
@@ -23,22 +31,114 @@ export const service_comp_data = [
         address: "123 Voltage Avenue, Wattsville",
         service: [
           {
-            serviceID: "SRV001J",
+            serviceID: "SUBCSRV001J",
             serviceName: "Electrical Diagnostics",
             serviceCategory: "Electrical Service",
             description:
               "Diagnostic testing to identify and repair electrical issues in vehicles",
             hourlyRate: 85,
             availability: "Mon-Fri, 8am-5pm",
+            serviceTotal: 400,
             averageDeliveryTime: "2 days",
+            status: "InProgress",
           },
         ],
+      },
+      {
+        subcontractorID: "SUBC012",
+        subcontractorName: "Auto Electrical Solutions",
+        subcontractorCategoryServices: "Auto Electrical Services",
+        contactPerson: "Thomas Harris",
+        contactNumber: "+1789543210",
+        email: "thomas.harris@autoelectricalsolutions.com",
+        address: "123 Voltage Avenue, Wattsville",
+        service: [
+          {
+            serviceID: "SUBCSRV00J",
+            serviceName: "Electrical Diagnostics",
+            serviceCategory: "Electrical Service",
+            description:
+              "Diagnostic testing to identify and repair electrical issues in vehicles",
+            hourlyRate: 85,
+            availability: "Mon-Fri, 8am-5pm",
+            serviceTotal: 400,
+            averageDeliveryTime: "2 days",
+            status: "InProgress",
+          },
+        ],
+      },
+      {
+        subcontractorID: "SUBC014",
+        subcontractorName: "Auto Electrical Solutions",
+        subcontractorCategoryServices: "Auto Electrical Services",
+        contactPerson: "Thomas Harris",
+        contactNumber: "+1789543210",
+        email: "thomas.harris@autoelectricalsolutions.com",
+        address: "123 Voltage Avenue, Wattsville",
+        service: [
+          {
+            serviceID: "SUBCSRV001J",
+            serviceName: "Electrical Diagnostics",
+            serviceCategory: "Electrical Service",
+            description:
+              "Diagnostic testing to identify and repair electrical issues in vehicles",
+            hourlyRate: 85,
+            availability: "Mon-Fri, 8am-5pm",
+            serviceTotal: 400,
+            averageDeliveryTime: "2 days",
+            status: "InProgress",
+          },
+        ],
+      },
+    ],
+    labor: [
+      {
+        laborID: "LBRSRV001A",
+        laborName: "Disassembly, restoration, and reassembly of the vehicle.",
+        hourlyRate: 25,
+        serviceTotal: 500,
+        discountApplicable: false,
+        discount: 0,
+        status: "InProgress",
+        technicians: [
+          {
+            id: "Tech001",
+            name: "Mike Smith",
+          },
+        ],
+        laborNote: "Excepteur veniam ut consequat laboris amet.Est ipsum qui duis proident aute ad Lorem ullamco deserunt.Esse sunt ipsum enim anim et nulla.Exercitation nisi et ipsum veniam proident."
+      },
+      {
+        laborID: "LBRSRV002A",
+        laborName: "Disassembly, restoration, and reassembly of the vehicle.",
+        hourlyRate: 25,
+        serviceTotal: 500,
+        discountApplicable: false,
+        discount: 0,
+        status: "InProgress",
+      },
+      {
+        laborID: "LBRSRV004A",
+        laborName: "Disassembly, restoration, and reassembly of the vehicle.",
+        hourlyRate: 25,
+        serviceTotal: 500,
+        discountApplicable: false,
+        discount: 0,
+        status: "InProgress",
+        technicians: [
+          {
+            id: "Tech001",
+            name: "Mike Smith",
+          },
+        ],
+        laborNote: "Excepteur veniam ut consequat laboris amet.Est ipsum qui duis proident aute ad Lorem ullamco deserunt.Esse sunt ipsum enim anim et nulla.Exercitation nisi et ipsum veniam proident."
       },
     ],
     serviceItems: [
       {
         inventoryID: "INV1001",
         partName: "Chassis Components",
+        availability: true,
         itemPartID: "SP123001",
         quantity: 1,
         price: 250,
@@ -49,6 +149,7 @@ export const service_comp_data = [
       {
         inventoryID: "INV1007",
         partName: "Engine Assembly",
+        availability: true,
         itemPartID: "SP123001",
         quantity: 1,
         price: 600,
@@ -59,6 +160,7 @@ export const service_comp_data = [
       {
         inventoryID: "INV1092",
         partName: "Interior Upholstery",
+        availability: true,
         itemPartID: "SP123001",
         quantity: 1,
         price: 400,
@@ -69,6 +171,7 @@ export const service_comp_data = [
       {
         inventoryID: "INV1012",
         partName: "Exterior Body Panels",
+        availability: true,
         itemPartID: "SP123001",
         quantity: 1,
         price: 1000,
@@ -79,6 +182,7 @@ export const service_comp_data = [
       {
         inventoryID: "INV1013",
         partName: "Paint and Finish",
+        availability: true,
         itemPartID: "SP123001",
         quantity: 1,
         price: 1500,
@@ -120,7 +224,15 @@ export const service_comp_data = [
     laborPrice: 6000,
     discount: 0,
     vat_tax: 3600,
+    authorization: "Authorized",
+    status: "InProgress",
     laborPricing: "standard",
+    technicians: [
+      {
+        id: "Tech001",
+        name: "Mike Smith",
+      },
+    ],
     subcontractor: [
       {
         subcontractorID: "SUBC011",
@@ -132,13 +244,15 @@ export const service_comp_data = [
         address: "456 Customization Lane, Modtown",
         service: [
           {
-            serviceID: "SRV002K",
+            serviceID: "SUBCSRV002K",
             serviceName: "Custom Body Kits Installation",
             serviceCategory: "Customization Service",
             description:
               "Installation of custom body kits to enhance the vehicle's aesthetics.",
             hourlyRate: 100,
             availability: "Mon-Fri, 9am-6pm",
+            serviceTotal: 400,
+            status: "InProgress",
             averageDeliveryTime: "3 days",
           },
         ],
@@ -148,6 +262,7 @@ export const service_comp_data = [
       {
         inventoryID: "INV1002",
         partName: "Custom Alloy Wheels",
+        availability: true,
         itemPartID: "SP123002",
         quantity: 4,
         price: 2000,
@@ -158,6 +273,7 @@ export const service_comp_data = [
       {
         inventoryID: "INV1014",
         partName: "Custom Paint and Finish",
+        availability: true,
         itemPartID: "SP123002",
         quantity: 1,
         price: 2500,
@@ -198,7 +314,15 @@ export const service_comp_data = [
     laborPrice: 5500,
     discount: 0,
     vat_tax: 3360,
+    authorization: "Authorized",
+    status: "InProgress",
     laborPricing: "standard",
+    technicians: [
+      {
+        id: "Tech001",
+        name: "Mike Smith",
+      },
+    ],
     subcontractor: [
       {
         subcontractorID: "SUBC012",
@@ -210,13 +334,15 @@ export const service_comp_data = [
         address: "789 Speed Avenue, Tuning City",
         service: [
           {
-            serviceID: "SRV003K",
+            serviceID: "SUBCSRV003K",
             serviceName: "Engine Performance Tuning",
             serviceCategory: "Performance Tuning Service",
             description:
               "Optimization of engine performance for enhanced power and efficiency.",
             hourlyRate: 120,
             availability: "Mon-Fri, 9am-6pm",
+            serviceTotal: 400,
+            status: "InProgress",
             averageDeliveryTime: "5 days",
           },
         ],
@@ -226,6 +352,7 @@ export const service_comp_data = [
       {
         inventoryID: "INV1003",
         partName: "Performance Exhaust System",
+        availability: true,
         itemPartID: "SP123003",
         quantity: 1,
         price: 1200,
@@ -236,6 +363,7 @@ export const service_comp_data = [
       {
         inventoryID: "INV1015",
         partName: "High Performance Suspension Kit",
+        availability: true,
         itemPartID: "SP123003",
         quantity: 1,
         price: 1800,
@@ -276,7 +404,15 @@ export const service_comp_data = [
     laborPrice: 5500,
     discount: 0,
     vat_tax: 3240,
+    authorization: "Authorized",
+    status: "InProgress",
     laborPricing: "standard",
+    technicians: [
+      {
+        id: "Tech001",
+        name: "Mike Smith",
+      },
+    ],
     subcontractor: [
       {
         subcontractorID: "SUBC013",
@@ -288,13 +424,15 @@ export const service_comp_data = [
         address: "890 Heritage Street, Retroville",
         service: [
           {
-            serviceID: "SRV004K",
+            serviceID: "SUBCSRV004K",
             serviceName: "Authentic Period Detailing",
             serviceCategory: "Detailing Service",
             description:
               "Thorough restoration to ensure authenticity according to the vehicle's original period.",
             hourlyRate: 110,
             availability: "Mon-Fri, 9am-6pm",
+            serviceTotal: 400,
+            status: "InProgress",
             averageDeliveryTime: "4 days",
           },
         ],
@@ -304,6 +442,7 @@ export const service_comp_data = [
       {
         inventoryID: "INV1004",
         partName: "Period-Correct Interior Upholstery",
+        availability: true,
         itemPartID: "SP123004",
         quantity: 1,
         price: 800,
@@ -314,6 +453,7 @@ export const service_comp_data = [
       {
         inventoryID: "INV1016",
         partName: "Authentic Period Paint and Finish",
+        availability: true,
         itemPartID: "SP123004",
         quantity: 1,
         price: 2000,
@@ -355,12 +495,21 @@ export const service_comp_data = [
     laborPrice: 300,
     discount: 0,
     vat_tax: 144,
+    authorization: "Authorized",
+    status: "InProgress",
     laborPricing: "standard",
+    technicians: [
+      {
+        id: "Tech001",
+        name: "Mike Smith",
+      },
+    ],
     subcontractor: [],
     serviceItems: [
       {
         inventoryID: "INV1020",
         partName: "Radiator Assembly",
+        availability: true,
         itemPartID: "SP123010",
         quantity: 1,
         price: 400,
@@ -371,6 +520,7 @@ export const service_comp_data = [
       {
         inventoryID: "INV1021",
         partName: "Coolant Pump",
+        availability: true,
         itemPartID: "SP123011",
         quantity: 1,
         price: 300,
@@ -411,12 +561,21 @@ export const service_comp_data = [
     laborPrice: 400,
     discount: 0,
     vat_tax: 216,
+    authorization: "Authorized",
+    status: "InProgress",
     laborPricing: "standard",
+    technicians: [
+      {
+        id: "Tech001",
+        name: "Mike Smith",
+      },
+    ],
     subcontractor: [],
     serviceItems: [
       {
         inventoryID: "INV1030",
         partName: "Shock Absorbers",
+        availability: true,
         itemPartID: "SP123020",
         quantity: 2,
         price: 600,
@@ -427,6 +586,7 @@ export const service_comp_data = [
       {
         inventoryID: "INV1031",
         partName: "Strut Assembly",
+        availability: true,
         itemPartID: "SP123021",
         quantity: 2,
         price: 800,
@@ -467,12 +627,21 @@ export const service_comp_data = [
     laborPrice: 600,
     discount: 0,
     vat_tax: 300,
+    authorization: "Authorized",
+    status: "InProgress",
     laborPricing: "standard",
+    technicians: [
+      {
+        id: "Tech001",
+        name: "Mike Smith",
+      },
+    ],
     subcontractor: [],
     serviceItems: [
       {
         inventoryID: "INV1040",
         partName: "Transmission Assembly",
+        availability: true,
         itemPartID: "SP123030",
         quantity: 1,
         price: 2000,
@@ -483,6 +652,7 @@ export const service_comp_data = [
       {
         inventoryID: "INV1041",
         partName: "Transmission Fluid",
+        availability: true,
         itemPartID: "SP123031",
         quantity: 1,
         price: 200,

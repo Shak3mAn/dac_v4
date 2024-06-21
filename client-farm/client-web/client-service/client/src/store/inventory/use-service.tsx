@@ -3,7 +3,8 @@ import {
     ServiceOption,
     ServiceAppointmentType,
     GeneralServiceCategoryType,
-    GeneralServiceItem
+    GeneralServiceItem,
+    CustomSrvPart,
 } from "@/lib/types/types"; // Ensure ServiceOption type is imported
 
 interface ServiceDetail {

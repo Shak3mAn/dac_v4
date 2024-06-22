@@ -2,7 +2,7 @@
 
 import axios from "axios";
 import { Edit, Hammer, MoreHorizontal, User, Trash } from "lucide-react";
-import { LiaToolsSolid } from "react-icons/lia";
+import { MdOutlineEngineering } from "react-icons/md";
 import { useParams, useRouter } from "next/navigation";
 import React, { useState } from "react";
 
@@ -86,7 +86,7 @@ export const CellAction: React.FC<CellActionProps> = ({
                 <DropdownMenuContent align="end">
                     <DropdownMenuLabel>Actions</DropdownMenuLabel>
                     <DropdownMenuItem onClick={() => console.log("Profile")}>
-                        <LiaToolsSolid className="mr-2 h-4 w-4" /> Labor
+                        <MdOutlineEngineering className="mr-2 h-4 w-4" /> Labor
                     </DropdownMenuItem>
                     <DropdownMenuItem onClick={() => console.log("Edit")}>
                         <Edit className="mr-2 h-4 w-4" /> Update

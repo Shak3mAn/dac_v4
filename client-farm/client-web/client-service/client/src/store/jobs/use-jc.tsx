@@ -24,7 +24,7 @@ interface JobCardItem {
     onAddJobCardItem: (newJobCard: JobCardDetailsType) => void;
     onAddPreJobCardItem: (newPreJobCard: JobCardDetailsType) => void;
     onUpdateJobCardItem: (jobCardId: string, updateJobCard: JobCardDetailsType) => void;
-    onUpdatePreJobCardItem:  (updatePreJobCard: JobCardDetailsType) => void;
+    onUpdatePreJobCardItem: (updatePreJobCard: JobCardDetailsType) => void;
     onDeleteJobCardItem: (jobCardId: string) => void;
     onDeleteAllJobCards: () => void;
     onDeletePreJobCardItem: () => void;
@@ -99,10 +99,10 @@ export const useJobCardServices = create<JobCardServiceDetail>((set) => ({
     ),
     onAddTempServiceItem: (newTempService) => set(
         { tempServices: newTempService }),
-    
-        onAddJobCardServiceItem: (newJobCardService) => set({
-            selectedService: newJobCardService
-        }),
+
+    onAddJobCardServiceItem: (newJobCardService) => set({
+        selectedService: newJobCardService
+    }),
     onUpdateServiceItem: (serviceId, updateService) => set(
         (state) => ({
             services: state.services.map(
@@ -141,7 +141,7 @@ export const useJobCard = create<JobCardItem>((set) => ({
         })
     ),
     onAddPreJobCardItem: (newPreJobCard) => set(
-        {preJobCardItem: newPreJobCard },
+        { preJobCardItem: newPreJobCard },
     ),
     onUpdateJobCardItem: (jobCardId, updatejobCard) => set(
         (state) => ({

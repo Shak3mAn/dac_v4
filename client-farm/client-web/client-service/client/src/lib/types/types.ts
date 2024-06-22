@@ -302,10 +302,11 @@ interface SrvSubcontractorService {
   serviceCategory: string;
   description: string;
   hourlyRate?: number;
-  availability: string;
-  averageDeliveryTime: string;
+  availability?: string;
+  averageDeliveryTime?: string;
   serviceTotal?: number;
   status: string;
+  serviceNote?: string,
 }
 
 interface SrvSubcontractor {
@@ -317,6 +318,7 @@ interface SrvSubcontractor {
   email: string;
   address: string;
   service: SrvSubcontractorService[];
+  subcontractorNote?: string; 
 }
 
 export interface SrvPartIncluded {
@@ -359,6 +361,9 @@ interface SrvLabor {
   laborID: string;
   laborName: string;
   hourlyRate?: number;
+  dailyRate?:number;
+  weeklyRate?: number;
+  monthlyRate?: number;
   serviceTotal?: number;
   discountApplicable: boolean;
   discount: number;
@@ -1235,4 +1240,4 @@ export interface CustomSrvPart {
   type: string;
   discountApplicable: boolean;
   discount: number;
-}
+} 

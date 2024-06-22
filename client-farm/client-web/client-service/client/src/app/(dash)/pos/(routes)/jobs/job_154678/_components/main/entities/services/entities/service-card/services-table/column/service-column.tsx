@@ -41,13 +41,13 @@ export const columns: ColumnDef<ServiceItemColumn>[] = [
       <div className="">
         {row.original.availability === true ? (
           <div className="flex items-center justify-center bg-green-500 bg-opacity-15 px-1.5 py-[2px] rounded-md">
-            <span className="text-green-900 font-medium tracking-right text-sm">
+            <span className="text-green-900 font-medium tracking-right text-xs">
               Available
             </span>
           </div>
         ) : (
           <div className="flex items-center justify-center bg-red-500 bg-opacity-15 px-1.5 py-[2px] rounded-md">
-            <span className="text-red-900 font-medium tracking-right text-sm">
+            <span className="text-red-900 font-medium tracking-right text-xs">
               Not Available
             </span>
           </div>

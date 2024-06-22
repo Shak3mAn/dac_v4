@@ -39,14 +39,14 @@ export const columns: ColumnDef<LaborItemColumn>[] = [
     cell: ({ row }) => (
       <div className="">
         {row.original.status !== "InProgress" ? (
-          <div className="flex items-center justify-center bg-green-500 bg-opacity-15 px-1.5 py-[2px] rounded-md">
-            <span className="text-green-900 font-medium tracking-right text-sm">
+          <div className="flex items-center justify-center bg-green-600 bg-opacity-15 px-1.5 py-[2px] rounded-md">
+            <span className="text-green-900 font-medium tracking-right text-xs">
               Complete
             </span>
           </div>
         ) : (
-          <div className="flex items-center justify-center bg-amber-500 bg-opacity-15 px-1.5 py-[2px] rounded-md">
-            <span className="text-amber-900 font-medium tracking-right text-sm">
+          <div className="flex items-center justify-center bg-amber-600 bg-opacity-15 px-1.5 py-[2px] rounded-md">
+            <span className="text-amber-900 font-medium tracking-right text-xs">
               InProgress
             </span>
           </div>

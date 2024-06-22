@@ -265,6 +265,8 @@ export const emptyServiceItem = {
   discount: 0,
   vat_tax: 0,
   laborPricing: "",
+  authorization: "",
+  status: "",
   technicians: [
     {
       id: "",
@@ -280,6 +282,7 @@ export const emptyServiceItem = {
       contactNumber: "",
       email: "",
       address: "",
+      subcontractorNote: "",
       service: [
         {
           serviceID: "",
@@ -290,6 +293,7 @@ export const emptyServiceItem = {
           availability: "",
           status: "",
           averageDeliveryTime: "",
+          serviceNote: "",
         },
       ],
     },
@@ -299,6 +303,9 @@ export const emptyServiceItem = {
       laborID: "",
       laborName: "",
       hourlyRate: 0,
+      dailyRate: 0,
+      weeklyRate: 0,
+      monthlyRate: 0,
       serviceTotal: 0,
       discountApplicable: false,
       discount: 0,

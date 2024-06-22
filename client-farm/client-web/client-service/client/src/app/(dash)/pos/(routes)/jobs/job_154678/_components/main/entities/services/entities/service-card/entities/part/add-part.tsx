@@ -120,7 +120,7 @@ export const AddPart = (props: Props) => {
       addPartModalToggle.isOpen;
     }
 
-    addPartModalToggle.onOpen();
+    // addPartModalToggle.onOpen();
   }
 
   return (
@@ -128,11 +128,11 @@ export const AddPart = (props: Props) => {
       <Dialog onOpenChange={handleOnChange}>
         <DialogTrigger asChild>
           {isOpen ? (
-              <Button variant={"outline"} size={"icon"}>
-                <div className='flex items-center'>
-                  <PiEngine className='h-4 w-4' />
-                </div>
-              </Button>
+            <Button variant={"outline"} size={"icon"}>
+              <div className='flex items-center'>
+                <PiEngine className='h-4 w-4' />
+              </div>
+            </Button>
           ) : (
             <Button variant={"outline"} className="h-auto py-1">
               <div className="flex items-center">Part</div>

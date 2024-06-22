@@ -2,6 +2,7 @@
 
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { Plus, Search } from 'lucide-react';
+import { LiaToolsSolid } from "react-icons/lia";
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -168,7 +169,7 @@ export const AddService: React.FC<AddServiceFormProps> = () => {
                             >
                                 <GeneralTooltip label="Service">
                                     <div className='flex items-center'>
-                                        <Plus className='h-4 w-4' />
+                                        <LiaToolsSolid className='h-4 w-4' />
                                     </div>
                                 </GeneralTooltip>
                             </Button>
@@ -181,7 +182,7 @@ export const AddService: React.FC<AddServiceFormProps> = () => {
                                 className=''
                             >
                                 <div className='flex items-center'>
-                                    <Plus className='h-4 w-4 mr-2' />
+                                    <LiaToolsSolid className='h-4 w-4 mr-2' />
                                 </div>
                                 <div>
                                     Service

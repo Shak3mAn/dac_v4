@@ -1,7 +1,7 @@
 "use client";
 
 import axios from "axios";
-import { Edit, Hammer, MoreHorizontal, User, Trash } from "lucide-react";
+import { Edit, Hammer, MoreHorizontal, Store, User, Trash } from "lucide-react";
 import { useParams, useRouter } from "next/navigation";
 import React, { useState } from "react";
 
@@ -85,7 +85,7 @@ export const CellAction: React.FC<CellActionProps> = ({
                 <DropdownMenuContent align="end">
                     <DropdownMenuLabel>Actions</DropdownMenuLabel>
                     <DropdownMenuItem onClick={() => console.log("Profile")}>
-                        <Hammer className="mr-2 h-4 w-4" /> Service
+                        <Store className="mr-2 h-4 w-4" /> Subcontractor
                     </DropdownMenuItem>
                     <DropdownMenuItem onClick={() => console.log("Edit")}>
                         <Edit className="mr-2 h-4 w-4" /> Update

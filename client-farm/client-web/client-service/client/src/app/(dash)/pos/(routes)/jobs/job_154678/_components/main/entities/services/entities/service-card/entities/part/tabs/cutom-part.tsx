@@ -284,7 +284,7 @@ export const CustomPartTab: React.FC<AddCustomPartFormProp> = () => {
                     <FormLabel>Name</FormLabel>
                     <FormControl>
                       <Input
-                        placeholder="Title"
+                        placeholder="Name"
                         disabled={loading}
                         {...field}
                       />

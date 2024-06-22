@@ -144,12 +144,12 @@ export const ServiceCard = (props: Props) => {
 
                 {/* Add Labor */}
                 <div>
-
+                  <AddLabor />
                 </div>
 
                 {/* Add Subcontract */}
                 <div>
-
+                  <AddSubcontract />
                 </div>
 
               </div>

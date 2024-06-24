@@ -155,7 +155,6 @@ export const CustomPartTab: React.FC<AddCustomPartFormProp> = () => {
 
   const { isSubmitting } = form.formState;
 
-
   const calculateDiscount = (value: string, price: number) => {
     return (Number(value) / 100) * price;
   };

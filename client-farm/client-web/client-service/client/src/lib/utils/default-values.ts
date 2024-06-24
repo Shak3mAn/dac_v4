@@ -51,12 +51,6 @@ export const emptyJobCard = {
     {
       id: "",
       name: "",
-      inspectionList: [
-        {
-          id: "",
-          inspectionItem: "",
-        },
-      ],
     },
   ],
   currenstServiceBay: 0,
@@ -560,6 +554,11 @@ export const emptyInspectionList = {
     },
   ],
 };
+
+export const emptyInspectionItem = {
+  id: "",
+  name: "",
+}
 
 {
   /* Insurance Accident Item */

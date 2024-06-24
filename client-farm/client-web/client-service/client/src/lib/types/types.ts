@@ -94,10 +94,11 @@ interface JCInsuranceDetails {
   policyNumber: string;
 }
 
-interface JCGeneralInspection {
+export interface JCGeneralInspection {
   id: string;
   name: string;
-  inspectionList: InspectionItem[];
+  inspector?: string;
+  inspectionList?: InspectionItem[];
 }
 
 export interface JCTechnician {
@@ -436,12 +437,17 @@ export interface SubcontractorDataType {
 interface InspectionItem {
   id: string;
   inspectionItem: string;
+  inspectionNote?: string;
+  status?: string;
+  grading?: string;
+  inspectionDate?: string;
 }
 
-export interface InspectionList {
+export interface InspectionListType {
   id: string;
   name: string;
-  inspectionList: InspectionItem[];
+  inspectionList?: InspectionItem[];
+  inspector?: string;
 }
 
 {/* --------------------------------------------------------- */}

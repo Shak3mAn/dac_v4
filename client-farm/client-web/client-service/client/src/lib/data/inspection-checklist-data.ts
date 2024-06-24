@@ -307,7 +307,7 @@ export const inspection_checklist_data = [
   },
   {
     id: "INL001I",
-    name: "Tire and Wheel Inspection",
+    name: "Tire & Wheel Inspection",
     inspectionList: [
       {
         id: "01I",
@@ -647,7 +647,7 @@ export const inspection_checklist_data = [
   },
   {
     id: "INL001S",
-    name: "Battery and Charging System Inspection",
+    name: "Battery & Charging System Inspection",
     inspectionList: [
       {
         id: "01S",
@@ -681,7 +681,7 @@ export const inspection_checklist_data = [
   },
   {
     id: "INL001T",
-    name: "Horn and Alarm System Inspection",
+    name: "Horn & Alarm System Inspection",
     inspectionList: [
       {
         id: "01T",

@@ -190,7 +190,7 @@ export const AddService: React.FC<AddServiceFormProps> = () => {
                             </Button>
                         )}
                 </DialogTrigger>
-                <DialogContent className='sm: max-w-[600px]'>
+                <DialogContent className='sm:max-w-[600px]'>
                     <DialogHeader>
                         <DialogTitle>Services</DialogTitle>
                         <DialogDescription>

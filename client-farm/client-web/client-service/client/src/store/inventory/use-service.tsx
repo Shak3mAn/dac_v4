@@ -5,6 +5,7 @@ import {
     GeneralServiceCategoryType,
     GeneralServiceItem,
     CustomSrvPart,
+    InspectionListType
 } from "@/lib/types/types"; // Ensure ServiceOption type is imported
 
 interface ServiceDetail {
@@ -50,6 +51,20 @@ interface GeneralServiceCategoryItem {
     onDeleteGeneralSrvCatItem: (generalSrvCatId: string) => void;
     onDeleteGeneralSrvItem: (generalSrvItemId: string) => void;
     onDeleteTempGeneralSrvCatItem: () => void;
+}
+
+{/* InspectionList */}
+interface InspectionListItem {
+    inspectionItem: InspectionListType | null;
+    inspectionList: InspectionListType[];
+    tempInspection: InspectionListType | null;
+    onAddInspectionItem: (newInspection: InspectionListType) => void;
+    onAddInspectionList: (newInspection: InspectionListType[]) => void;
+    onAddTempInspectionItem: (newTempInspection: InspectionListType) => void;
+    onUpdateInspectionItem: (inspectionId: string, updateInspection: InspectionListType) => void;
+    onDeleteInspectionItem: (inspectionId: string) => void;
+    onDeleteTempInspectionItem: () => void;
+    onUpdateInspectionList: (updatedInspectionList: InspectionListType[]) => void;
 }
 
 {/* Service */ }
@@ -182,4 +197,58 @@ export const useServiceAppointment = create<ServiceAppointmentItem>((set) => ({
     onDeleteTempServiceAppointmentItem: () => set({
         tempServiceAppointment: null
     }),
+}));
+
+{/* Inspection List */}
+export const useInspection = create<InspectionListItem>((set) => ({
+    inspectionItem: null,
+    inspectionList: [],
+    tempInspection: null,
+    onAddInspectionItem: (newInspection) => set(
+        (state) => ({
+            inspectionList: [...state.inspectionList, newInspection]
+        })
+    ),
+    onAddInspectionList: (newInspectionList) => set(
+        (state) => ({
+            inspectionList: [...state.inspectionList, ...newInspectionList]
+        })
+    ),
+    onAddTempInspectionItem: (newTempInspection) => set({
+        tempInspection: newTempInspection
+    }),
+    onUpdateInspectionItem: (inspectionId, updatedInspection) => set(
+        (state) => ({
+            inspectionList: state.inspectionList.map(
+                (inspection) => (
+                    inspection.id === inspectionId ? updatedInspection : inspection
+                )
+            ),
+        })
+    ),
+    onDeleteInspectionItem: (inspectionId) => set(
+        (state) => ({
+            inspectionList: state.inspectionList.filter(
+                (inspection) => inspection.id !== inspectionId
+            )
+        })
+    ),
+    onDeleteTempInspectionItem: () => set({
+        tempInspection: null
+    }),
+    onUpdateInspectionList: (updatedInspectionList) => set(
+        (state) => ({
+            inspectionList: state.inspectionList.map(
+                (inspection) => updatedInspectionList.find(
+                    (updatedItem) => updatedItem.id === inspection.id
+                ) || inspection
+            ).concat(
+                updatedInspectionList.filter(
+                    (updatedItem) => !state.inspectionList.some(
+                        (inspection) => inspection.id === updatedItem.id
+                    )
+                )
+            )
+        })
+    )
 }));

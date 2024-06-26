@@ -1,6 +1,6 @@
 "use client";
 
-import { PlusCircle } from "lucide-react";
+import { Plus, PlusCircle } from "lucide-react";
 import { HiOutlineClipboardDocumentList } from "react-icons/hi2";
 import React, { useState, useMemo, useEffect, useCallback } from "react";
 import * as z from "zod";
@@ -225,32 +225,25 @@ export const AddInspection: React.FC = () => {
                 setLoading(false);
             }
         },
-        [tab]
+        [tab, form]
     );
 
     return (
         <>
-            <Dialog open={open} onOpenChange={setOpen}>
+            <Dialog>
                 <DialogTrigger asChild>
-                    <Button variant={"outline"} className="h-auto py-1">
-                        <PlusCircle className="h-4 w-4 mr-2" />
+                    <Button variant={"default"} size={"default"} >
+                        <Plus className="h-4 w-4 mr-2" />
                         <div className="flex items-center">Inspection</div>
                     </Button>
                 </DialogTrigger>
                 <DialogContent className="max-w-[600px]">
                     <DialogHeader>
-                        <div className="flex space-x-2">
-                            <div className="flex items-center">
-                                <HiOutlineClipboardDocumentList className="h-4 w-4" />
-                            </div>
-                            <div className="flex flex-col">
                                 <DialogTitle>Inspection</DialogTitle>
                                 <DialogDescription>
                                     Kindly fill out the form below to include an inspection item
                                     in the job card.
                                 </DialogDescription>
-                            </div>
-                        </div>
 
                         <div className="flex gap-2 pt-2">
                             <Button

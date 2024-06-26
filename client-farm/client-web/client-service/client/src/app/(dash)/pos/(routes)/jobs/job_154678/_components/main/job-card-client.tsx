@@ -64,7 +64,7 @@ export const JobCardClient = () => {
                         </span>
 
                         <div className='flex items-center justify-center bg-amber-600 bg-opacity-35 px-4 py-1 rounded-lg cursor-pointer hover:scale-110 active:scale-95 transition-all ease-in-out duration-200'>
-                            <span className='text-amber-900 text-xs tracking-tight font-semibold'>
+                            <span className='text-primary text-xs tracking-tight font-semibold'>
                                 In Progress
                             </span>
                         </div>
@@ -74,7 +74,7 @@ export const JobCardClient = () => {
                             Job Priority:
                         </span>
                         <div className='flex items-center justify-center bg-red-600 bg-opacity-35 px-4 py-1 rounded-lg cursor-pointer hover:scale-110 active:scale-95 transition-all ease-in-out duration-200'>
-                            <span className='text-red-900 text-xs tracking-tight font-semibold'>
+                            <span className='text-primary text-xs tracking-tight font-semibold'>
                                 High
                             </span>
                         </div>
@@ -97,7 +97,9 @@ export const JobCardClient = () => {
                     <Separator />
                 </div>
                 <div className="grid grid-cols-10 px-4">
-                    <div className="col-span-7 flex">
+                    <div className={cn("flex",
+                        jcSingleToggle.isServices === true || jcSingleToggle.isSummary === true ? "col-span-7" : "col-span-10"
+                    )}>
                         {/* Summary */}
                         {jcSingleToggle.isSummary === true && (
                             <Summary />
@@ -114,22 +116,23 @@ export const JobCardClient = () => {
                         )}
 
                         {/* Parts Procurement */}
-                        {jcSingleToggle.isPartProcurement === true && (
+                        {/* {jcSingleToggle.isPartProcurement === true && (
                             <PartsProcurement />
-                        )}
+                        )} */}
 
                         {/* Messages  */}
                         {jcSingleToggle.isMessages === true && (
                             <Messages />
                         )}
                     </div>
+                    {(jcSingleToggle.isServices || jcSingleToggle.isSummary) && (
                     <div className="flex space-x-2 col-span-3 w-full">
                         <div className="px-4 h-full">
                             <Separator orientation="vertical" className="w-[0.5px]" />
                         </div>
-                        {/* Job Card SideCard Summary*/}
                         <JobCardSideCardSummary />
                     </div>
+                )}
                 </div>
             </div>
         </>

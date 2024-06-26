@@ -98,6 +98,8 @@ export interface JCGeneralInspection {
   id: string;
   name: string;
   inspector?: string;
+  status?: string;
+  date?: string;
   inspectionList?: InspectionItem[];
 }
 
@@ -434,13 +436,22 @@ export interface SubcontractorDataType {
   /* Inspection Types */
 }
 {/* --------------------------------------------------------- */}
-interface InspectionItem {
+export interface InspectionItem {
   id: string;
   inspectionItem: string;
   inspectionNote?: string;
   status?: string;
   grading?: string;
   inspectionDate?: string;
+  inspectionIssues?: InspectionItemIssues[];
+}
+
+interface InspectionItemIssues {
+  id: string;
+  inspectionImage?: string;
+  inspectionVideo?: string;
+  issueComment?: string;
+  issueSolutionSuggestion?: string;
 }
 
 export interface InspectionListType {
@@ -448,6 +459,7 @@ export interface InspectionListType {
   name: string;
   inspectionList?: InspectionItem[];
   inspector?: string;
+  
 }
 
 {/* --------------------------------------------------------- */}

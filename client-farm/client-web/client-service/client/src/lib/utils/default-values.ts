@@ -547,17 +547,11 @@ export const emptyCatalogue = {
 export const emptyInspectionList = {
   id: "",
   name: "",
-  inspectionList: [
-    {
-      id: "",
-      inspectionItem: "",
-    },
-  ],
 };
 
 export const emptyInspectionItem = {
   id: "",
-  name: "",
+  inspectionItem: "",
 }
 
 {

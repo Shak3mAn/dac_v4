@@ -234,6 +234,7 @@ export const jc_card_view_eg = {
       {
         id: "INL001A",
         name: "General Inspection",
+        status: "InProgress",
         inspectionList: [
           {
             id: "01A",

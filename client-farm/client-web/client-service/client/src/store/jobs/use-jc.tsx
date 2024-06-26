@@ -1,5 +1,12 @@
 import { create } from "zustand";
-import { JobCardDetailsType, JCServiceDetail, JCTechnician, GeneralServiceItem } from "@/lib/types/types"
+import {
+    JobCardDetailsType,
+    JCServiceDetail,
+    JCTechnician,
+    GeneralServiceItem,
+    JCGeneralInspection,
+    InspectionItem
+} from "@/lib/types/types"
 import { set } from "date-fns";
 
 {/* Job Card Service Item */ }
@@ -28,6 +35,14 @@ interface JobCardItem {
     onDeleteJobCardItem: (jobCardId: string) => void;
     onDeleteAllJobCards: () => void;
     onDeletePreJobCardItem: () => void;
+    onAddJobCardInspectionListItem: (jobCardId: string, newInspection: JCGeneralInspection) => void;
+    onUpdateJobCardInspectionListItem: (jobCardId: string, inspectionId: string, updatedInspection: JCGeneralInspection) => void;
+    onDeleteAllJobCardInspectionList: (jobCardId: string) => void;
+    onDeleteJobCardInspectionListItem: (jobCardId: string, inspectionId: string) => void;
+    onAddJobCardInspectItem: (jobCardId: string, inspectionId: string, newInspectionItem: InspectionItem) => void;
+    onUpdateJobCardInspectItem: (jobCardId: string, inspectionId: string, updatedInspectionItem: InspectionItem) => void;
+    onDeleteAllJobCardInspectItem: (jobCardId: string, inspectionId: string) => void;
+    onDeleteJobCardInspectItem: (jobCardId: string, inspectionId: string, itemId: string) => void;
 }
 
 interface SingleJobCardItem {
@@ -130,6 +145,7 @@ export const useSingleJobCard = create<SingleJobCardItem>((set) => ({
     deleteJobCardItem: () => set({ jobCardItem: null }),
 }));
 
+
 {/* Job Card(s) */ }
 export const useJobCard = create<JobCardItem>((set) => ({
     jobCardItem: null,
@@ -165,8 +181,132 @@ export const useJobCard = create<JobCardItem>((set) => ({
     onDeleteAllJobCards: () => set({ jobCards: [] }),
     onDeletePreJobCardItem: () => set({
         preJobCardItem: null
-    })
+    }),
+    onAddJobCardInspectionListItem: (jobCardId, newInspection) => set(
+        (state) => ({
+            jobCards: state.jobCards.map((jobCard) =>
+                jobCard.jobCardID === jobCardId
+                    ? {
+                        ...jobCard,
+                        inspectionChecklist: [...(jobCard.inspectionChecklist || []), newInspection]
+                    }
+                    : jobCard
+            ),
+        })
+    ),
+    onUpdateJobCardInspectionListItem: (jobCardId, inspectionId, updatedInspection) => set(
+        (state) => ({
+            jobCards: state.jobCards.map((jobCard) =>
+                jobCard.jobCardID === jobCardId
+                    ? {
+                        ...jobCard,
+                        inspectionChecklist: jobCard.inspectionChecklist?.map((inspection) =>
+                            inspection.id === inspectionId ? updatedInspection : inspection
+                        )
+                    }
+                    : jobCard
+            ),
+        })
+    ),
+    onDeleteAllJobCardInspectionList: (jobCardId) => set(
+        (state) => ({
+            jobCards: state.jobCards.map((jobCard) =>
+                jobCard.jobCardID === jobCardId
+                    ? {
+                        ...jobCard,
+                        inspectionChecklist: []
+                    }
+                    : jobCard
+            ),
+        })
+    ),
+    onDeleteJobCardInspectionListItem: (jobCardId, inspectionId) => set(
+        (state) => ({
+            jobCards: state.jobCards.map((jobCard) =>
+                jobCard.jobCardID === jobCardId
+                    ? {
+                        ...jobCard,
+                        inspectionChecklist: jobCard.inspectionChecklist?.filter((inspection) =>
+                            inspection.id !== inspectionId
+                        )
+                    }
+                    : jobCard
+            ),
+        })
+    ),
+    onAddJobCardInspectItem: (jobCardId, inspectionId, newInspectionItem) =>
+        set((state) => ({
+            jobCards: state.jobCards.map((jobCard) =>
+                jobCard.jobCardID === jobCardId
+                    ? {
+                        ...jobCard,
+                        inspectionChecklist: jobCard.inspectionChecklist?.map((inspection) =>
+                            inspection.id === inspectionId
+                                ? {
+                                    ...inspection,
+                                    inspectionList: [...(inspection.inspectionList || []), newInspectionItem],
+                                }
+                                : inspection
+                        ),
+                    }
+                    : jobCard
+            ),
+        })),
+    onUpdateJobCardInspectItem: (jobCardId, inspectionId, updatedInspectionItem) =>
+        set((state) => ({
+            jobCards: state.jobCards.map((jobCard) =>
+                jobCard.jobCardID === jobCardId
+                    ? {
+                        ...jobCard,
+                        inspectionChecklist: jobCard.inspectionChecklist?.map((inspection) =>
+                            inspection.id === inspectionId
+                                ? {
+                                    ...inspection,
+                                    inspectionList: inspection.inspectionList?.map((item) =>
+                                        item.id === updatedInspectionItem.id ? updatedInspectionItem : item
+                                    ),
+                                }
+                                : inspection
+                        ),
+                    }
+                    : jobCard
+            ),
+        })),
+    onDeleteAllJobCardInspectItem: (jobCardId, inspectionId) =>
+        set((state) => ({
+            jobCards: state.jobCards.map((jobCard) =>
+                jobCard.jobCardID === jobCardId
+                    ? {
+                        ...jobCard,
+                        inspectionChecklist: jobCard.inspectionChecklist?.map((inspection) =>
+                            inspection.id === inspectionId ? { ...inspection, inspectionList: [] } : inspection
+                        ),
+                    }
+                    : jobCard
+            ),
+        })),
+    onDeleteJobCardInspectItem: (jobCardId, inspectionId, itemId) =>
+        set((state) => ({
+            jobCards: state.jobCards.map((jobCard) =>
+                jobCard.jobCardID === jobCardId
+                    ? {
+                        ...jobCard,
+                        inspectionChecklist: jobCard.inspectionChecklist?.map((inspection) =>
+                            inspection.id === inspectionId
+                                ? {
+                                    ...inspection,
+                                    inspectionList: inspection.inspectionList?.filter(
+                                        (item) => item.id !== itemId
+                                    ),
+                                }
+                                : inspection
+                        ),
+                    }
+                    : jobCard
+            ),
+        })),
 }));
+
 
 export const useTodoList = create<TaskItem>((set) => ({
     taskItem: null,

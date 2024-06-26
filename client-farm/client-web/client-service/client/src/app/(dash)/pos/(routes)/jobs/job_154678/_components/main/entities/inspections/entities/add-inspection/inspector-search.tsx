@@ -67,7 +67,7 @@ export const AssessorSearch = (props: Props) => {
   return (
     <div>
       <div className="text-sm font-medium">
-        Technician
+        Assessor | Technician
       </div>
       {/*  Technician Input */}
       <div className='flex flex-col space-y-2 items-center pt-2 justify-start relative'>
@@ -101,7 +101,7 @@ export const AssessorSearch = (props: Props) => {
                   ))
                 ) : (
                   <div className="text-muted-foreground text-sm font-medium tracking-tight flex items-center justify-center w-full p-4 py-8 rounded-md">
-                    Technician doesn&apos;t exist.
+                   Assessor | Technician doesn&apos;t exist.
                   </div>
                 )}
               </ScrollArea>

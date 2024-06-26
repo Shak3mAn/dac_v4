@@ -52,7 +52,7 @@ export const JobCardSingleViewToggle = () => {
                             Inspections
                         </span>
                     </div>
-                    <div
+                    {/* <div
                         className={cn(
                             "flex space-x-1.5 items-center justify-around text-nowrap tracking-tight",
                             jcSingleToggle.isPartProcurement
@@ -64,7 +64,7 @@ export const JobCardSingleViewToggle = () => {
                         <span>
                             Parts Procurement
                         </span>
-                    </div>
+                    </div> */}
                     <div
                         className={cn(
                             "flex space-x-1.5 items-center justify-around tracking-tight",

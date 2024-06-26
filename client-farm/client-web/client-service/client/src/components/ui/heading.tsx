@@ -4,12 +4,14 @@ interface HeadingProps {
   title: string;
   description: string;
   section?: string;
+  subSection?: string;
 }
 
 export const Heading: React.FC<HeadingProps> = ({
   title,
   description,
   section,
+  subSection
 }) => {
   return (
     <div>
@@ -22,6 +24,15 @@ export const Heading: React.FC<HeadingProps> = ({
             {section}
           </h2>
         )}
+
+        {subSection && <h2 className="mx-2 text-3xl font-semibold">/</h2>}
+
+        {subSection && (
+          <h2 className="flex items-end text-muted-foreground text-xl font-semibold tracking-tight">
+            {subSection}
+          </h2>
+        )}
+
       </div>
       <p className="text-sm text-muted-foreground mt-1">{description}</p>
     </div>

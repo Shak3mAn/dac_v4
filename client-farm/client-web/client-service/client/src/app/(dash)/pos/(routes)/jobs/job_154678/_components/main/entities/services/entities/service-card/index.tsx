@@ -64,13 +64,13 @@ export const ServiceCard = (props: Props) => {
                 <div>
                   {service_comp_data[0].status === "InProgress" ? (
                     <div className='flex items-center justify-center bg-amber-600 bg-opacity-35 px-2 py-1 rounded-lg cursor-pointer hover:scale-110 active:scale-95 transition-all ease-in-out duration-200'>
-                      <span className='text-amber-900 text-xs tracking-tight font-semibold'>
+                      <span className='text-primary text-xs tracking-tight font-semibold'>
                         In Progress
                       </span>
                     </div>
                   ) : (
                     <div className='flex items-center justify-center bg-green-600 bg-opacity-35 px-2 py-1 rounded-lg cursor-pointer hover:scale-110 active:scale-95 transition-all ease-in-out duration-200'>
-                      <span className='text-green-900 text-xs tracking-tight font-semibold'>
+                      <span className='text-primary text-xs tracking-tight font-semibold'>
                         Complete                            </span>
                     </div>
                   )}
@@ -79,25 +79,25 @@ export const ServiceCard = (props: Props) => {
                 <div>
                   {service_comp_data[0].authorization === "Authorized" && (
                     <div className='flex items-center justify-center bg-green-600 bg-opacity-35 px-2 py-1 rounded-lg cursor-pointer hover:scale-110 active:scale-95 transition-all ease-in-out duration-200'>
-                      <span className='text-green-900 text-xs tracking-tight font-semibold'>
+                      <span className='text-primary text-xs tracking-tight font-semibold'>
                         Authorized                          </span>
                     </div>
                   )}
                   {service_comp_data[0].authorization === "Declined" && (
                     <div className='flex items-center justify-center bg-red-400 bg-opacity-35 px-2 py-1 rounded-lg cursor-pointer hover:scale-110 active:scale-95 transition-all ease-in-out duration-200'>
-                      <span className='text-red-900 text-xs tracking-tight font-semibold'>
+                      <span className='text-primary text-xs tracking-tight font-semibold'>
                         Declined                         </span>
                     </div>
                   )}
                   {service_comp_data[0].authorization === "Deferred" && (
                     <div className='flex items-center justify-center bg-amber-600 bg-opacity-35 px-2 py-1 rounded-lg cursor-pointer hover:scale-110 active:scale-95 transition-all ease-in-out duration-200'>
-                      <span className='text-amber-900 text-xs tracking-tight font-semibold'>
+                      <span className='text-primary text-xs tracking-tight font-semibold'>
                         Deferred                          </span>
                     </div>
                   )}
                   {service_comp_data[0].authorization === "Pending" && (
                     <div className='flex items-center justify-center bg-gray-400 bg-opacity-35 px-2 py-1 rounded-lg cursor-pointer hover:scale-110 active:scale-95 transition-all ease-in-out duration-200'>
-                      <span className='text-gray-800 text-xs tracking-tight font-semibold'>
+                      <span className='text-primary text-xs tracking-tight font-semibold'>
                         Pending                          </span>
                     </div>
                   )}
